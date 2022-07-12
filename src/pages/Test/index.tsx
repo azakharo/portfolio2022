@@ -6,7 +6,7 @@ import { Container, Typography, Box, Grid } from '@material-ui/core';
 const Test: FC = () => (
   <>
     <Helmet>
-      <title>Novakid - Test</title>
+      <title>AZA - Test</title>
     </Helmet>
     <Container maxWidth="lg">
       {/* ============================================================= */}

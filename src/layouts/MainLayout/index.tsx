@@ -3,7 +3,7 @@ import React, { FC, memo, ReactNode } from 'react';
 import Header from './Header';
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const MainLayout: FC<Props> = ({ children }) => (

@@ -41,7 +41,7 @@ const FrontendError: FC = () => {
   return (
     <>
       <Helmet>
-        <title>Novakid - {t('defaultErrorMessage')}</title>
+        <title>AZA - {t('defaultErrorMessage')}</title>
       </Helmet>
 
       <Container maxWidth="lg" className={classes.root}>

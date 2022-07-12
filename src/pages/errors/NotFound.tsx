@@ -42,7 +42,7 @@ const NotFound: FC = () => {
   return (
     <>
       <Helmet>
-        <title>Novakid - {t('errorMessage__pageNotFound')}</title>
+        <title>AZA - {t('errorMessage__pageNotFound')}</title>
       </Helmet>
 
       <Container maxWidth="lg" className={classes.root}>
