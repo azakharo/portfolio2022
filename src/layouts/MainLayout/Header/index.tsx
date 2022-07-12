@@ -23,14 +23,7 @@ import classNames from 'classnames';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import { ROUTE__TEST } from 'src/routes/routes';
-import {
-  OLD_PATH__ACCOUNT,
-  OLD_PATH__ACHIEVEMENTS,
-  OLD_PATH__BONUSES,
-  OLD_PATH__CLASSES,
-  OLD_PATH__LIBRARY,
-} from 'src/routes/oldFrontendPaths';
-import { EXTERNAL_URL__NOVAKID_HOME } from 'src/routes/externalUrls';
+import { EXTERNAL_URL__HOME } from 'src/routes/externalUrls';
 import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
 import { getLogoImg } from 'src/components/logo';
 
@@ -47,23 +40,23 @@ const uiSections: UiSection[] = [
   },
   {
     labelKey: 'header__menuItem__Schedule',
-    oldFrontendPath: OLD_PATH__CLASSES,
+    oldFrontendPath: '/schdule',
   },
   {
     labelKey: 'header__menuItem__Library',
-    oldFrontendPath: OLD_PATH__LIBRARY,
+    oldFrontendPath: '/lib',
   },
   {
     labelKey: 'header__menuItem__Achievements',
-    oldFrontendPath: OLD_PATH__ACHIEVEMENTS,
+    oldFrontendPath: '/achiev',
   },
   {
     labelKey: 'header__menuItem__Bonuses',
-    oldFrontendPath: OLD_PATH__BONUSES,
+    oldFrontendPath: '/bonuses',
   },
   {
     labelKey: 'header__menuItem__Account',
-    oldFrontendPath: OLD_PATH__ACCOUNT,
+    oldFrontendPath: '/account',
   },
 ];
 
@@ -256,7 +249,7 @@ const Header: FC = () => {
     <AppBar position="sticky" color="inherit">
       <Toolbar className={classes.toolbar}>
         {/* Logo */}
-        <Link target="_blank" href={EXTERNAL_URL__NOVAKID_HOME}>
+        <Link target="_blank" href={EXTERNAL_URL__HOME}>
           <img src={getLogoImg()} alt="logo" className={classes.logo} />
         </Link>
 
