@@ -1,0 +1,9 @@
+build
+node_modules
+.github
+*.html
+
+# don't show typescript error for the following js files:
+src/datetime/convertLangCode2DateFnsLocale.js
+src/components/Autocomplete.js
+src/utils/lazyWithRetry.js
