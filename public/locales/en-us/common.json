@@ -1,2 +1,15 @@
 {
+  "autocomplete__noOptionsText": "No Options",
+  "backToHomeButton__text": "Back to Home",
+  "buttonText__Cancel": "Cancel",
+  "defaultErrorMessage": "Something went wrong",
+  "errorMessage__pageNotFound": "Page Not Found",
+  "errorPage404__hint__wrongUrl": "Probably you specified a wrong URL",
+  "header__menuItem__About": "About",
+  "header__menuItem__Contacts": "Contacts",
+  "header__menuItem__Examples": "Examples",
+  "header__menuItem__Specialization": "Specialization",
+  "header__menuItem__Top": "Beginning",
+  "loadingMessage": "Loading...",
+  "noDataMessage": "No Data"
 }

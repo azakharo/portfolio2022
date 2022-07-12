@@ -17,7 +17,6 @@ import {
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import MenuIcon from '@material-ui/icons/Menu';
-import HelpIcon from '@material-ui/icons/HelpOutline';
 import classNames from 'classnames';
 
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
@@ -35,28 +34,24 @@ interface UiSection {
 
 const uiSections: UiSection[] = [
   {
-    labelKey: 'header__menuItem__Dashboard',
+    labelKey: 'header__menuItem__Top',
     route: ROUTE__TEST,
   },
   {
-    labelKey: 'header__menuItem__Schedule',
+    labelKey: 'header__menuItem__About',
     oldFrontendPath: '/schdule',
   },
   {
-    labelKey: 'header__menuItem__Library',
+    labelKey: 'header__menuItem__Specialization',
     oldFrontendPath: '/lib',
   },
   {
-    labelKey: 'header__menuItem__Achievements',
+    labelKey: 'header__menuItem__Examples',
     oldFrontendPath: '/achiev',
   },
   {
-    labelKey: 'header__menuItem__Bonuses',
+    labelKey: 'header__menuItem__Contacts',
     oldFrontendPath: '/bonuses',
-  },
-  {
-    labelKey: 'header__menuItem__Account',
-    oldFrontendPath: '/account',
   },
 ];
 
@@ -168,9 +163,6 @@ const Header: FC = () => {
   const classes = useStyles();
   const [t] = useTranslation();
   const location = useLocation();
-  const isDesktop = useMediaQueryPatched((appTheme: Theme) =>
-    appTheme.breakpoints.up('md'),
-  );
   const theme = useTheme();
   const upLg = useMediaQueryPatched((appTheme: Theme) =>
     appTheme.breakpoints.up('lg'),
@@ -232,13 +224,6 @@ const Header: FC = () => {
       onClose={handleMobileMenuClose}
       className={classes.dropdownMenu}
     >
-      <MenuItem className={classes.uiSectionLink}>
-        <Box display="flex" justifyContent="space-between" width="100%">
-          {t('header__menuItem__Help')}
-          <HelpIcon />
-        </Box>
-      </MenuItem>
-
       {uiSections.map(section => renderUiSectionLink(section, MenuItem))}
 
       <Divider className={classes.menuDivider} />
@@ -255,15 +240,6 @@ const Header: FC = () => {
 
         {/* Growing empty placeholder */}
         <div className={classes.grow} />
-
-        {isDesktop && (
-          <Box mr={2}>
-            <MenuItem className={classes.uiSectionLink}>
-              <HelpIcon />
-              <Box ml={1}>{t('header__menuItem__Help')}</Box>
-            </MenuItem>
-          </Box>
-        )}
 
         <Box mx={4}>
           <CurrentLanguageSelect className={classes.langSelect} />

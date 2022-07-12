@@ -1,2 +1,15 @@
 {
+  "autocomplete__noOptionsText": "Нет опций",
+  "backToHomeButton__text": "Вернуться на главную",
+  "buttonText__Cancel": "Отмена",
+  "defaultErrorMessage": "Что-то пошло не так",
+  "errorMessage__pageNotFound": "Страница не найдена",
+  "errorPage404__hint__wrongUrl": "Возможно, вы указали неверный URL",
+  "header__menuItem__About": "Обо мне",
+  "header__menuItem__Contacts": "Контакты",
+  "header__menuItem__Examples": "Примеры работ",
+  "header__menuItem__Specialization": "Моя специализация",
+  "header__menuItem__Top": "Начало",
+  "loadingMessage": "Загрузка...",
+  "noDataMessage": "Нет данных"
 }
