@@ -10,7 +10,6 @@ import {
   Button,
   Divider,
   Box,
-  ButtonBase,
   useTheme,
   Link,
 } from '@material-ui/core';
@@ -248,16 +247,6 @@ const Header: FC = () => {
         {/* Menu shown for desktop */}
         <div className={classes.sectionDesktop}>
           {uiSections.map(section => renderUiSectionLink(section, Button))}
-
-          {/* Profile menu */}
-          <ButtonBase
-            aria-label="user menu toggle button"
-            aria-controls="ha-ha"
-            aria-haspopup="true"
-            className={classes.userMenuButton}
-          >
-            User name
-          </ButtonBase>
         </div>
 
         {/* More button shown for small screens */}
