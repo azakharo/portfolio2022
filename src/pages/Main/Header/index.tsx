@@ -10,7 +10,6 @@ import {
   Menu,
   Button,
   Box,
-  useMediaQuery,
 } from '@material-ui/core';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -21,7 +20,8 @@ import { COLOR__LIGHT_GREY } from 'src/theme';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import logo from 'src/assets/logo.png';
-import { ROUTE__TEST } from '../../../routes/routes';
+import { ROUTE__TEST } from 'src/routes/routes';
+import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
 
 interface UiSection {
   labelKey: string;
@@ -84,7 +84,9 @@ const Header: FC = () => {
   const classes = useStyles();
   const [t] = useTranslation();
   const location = useLocation();
-  const upLg = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
+  const upLg = useMediaQueryPatched((theme: Theme) =>
+    theme.breakpoints.up('lg'),
+  );
 
   // Collapsed menu for tablets and mobile
   const [mobileMenuAnchorEl, setMobileMenuAnchorEl] =

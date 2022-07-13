@@ -12,7 +12,7 @@ import Contacts from './Contacts';
 const Main: FC = () => (
   <>
     <Helmet>
-      <title>AZA - Test</title>
+      <title>AZA - Portfolio</title>
     </Helmet>
 
     <Header />
