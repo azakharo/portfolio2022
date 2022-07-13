@@ -11,7 +11,6 @@ import {
   Button,
   Box,
 } from '@material-ui/core';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import classNames from 'classnames';
@@ -21,30 +20,34 @@ import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import logo from 'src/assets/logo.png';
 import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
-import { SECTION__TOP } from 'src/pages/Main/sectionIds';
+import {
+  SECTION__ABOUT,
+  SECTION__CONTACTS,
+  SECTION__EXAMPLES,
+  SECTION__SPECIALIZATION,
+} from 'src/pages/Main/sectionIds';
 
 interface UiSection {
   labelKey: string;
-  route?: string;
-  oldFrontendPath?: string;
+  sectionId: string;
 }
 
 const uiSections: UiSection[] = [
   {
     labelKey: 'header__menuItem__About',
-    oldFrontendPath: '/schdule',
+    sectionId: SECTION__ABOUT,
   },
   {
     labelKey: 'header__menuItem__Specialization',
-    oldFrontendPath: '/lib',
+    sectionId: SECTION__SPECIALIZATION,
   },
   {
     labelKey: 'header__menuItem__Examples',
-    oldFrontendPath: '/achiev',
+    sectionId: SECTION__EXAMPLES,
   },
   {
     labelKey: 'header__menuItem__Contacts',
-    oldFrontendPath: '/bonuses',
+    sectionId: SECTION__CONTACTS,
   },
 ];
 
@@ -79,7 +82,6 @@ const useStyles = makeStyles((theme: Theme) =>
 const Header: FC = () => {
   const classes = useStyles();
   const [t] = useTranslation();
-  const location = useLocation();
   const upLg = useMediaQueryPatched((theme: Theme) =>
     theme.breakpoints.up('lg'),
   );
@@ -96,18 +98,14 @@ const Header: FC = () => {
   };
 
   const renderUiSectionLink = (section: UiSection) => {
-    const { route, oldFrontendPath, labelKey } = section;
+    const { sectionId, labelKey } = section;
 
     return (
       <Button
-        key={route || oldFrontendPath}
-        // TODO improve typing
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        component={route ? RouterLink : undefined}
-        to={route || undefined}
+        key={sectionId}
+        href={`#${sectionId}`}
         className={classNames({
-          [classes.activeUiSectionLink]: route === location.pathname,
+          [classes.activeUiSectionLink]: false,
         })}
       >
         {t(labelKey)}
@@ -116,22 +114,18 @@ const Header: FC = () => {
   };
 
   const renderUiSectionLinkForMobileMenu = (section: UiSection) => {
-    const { labelKey, route, oldFrontendPath } = section;
+    const { labelKey, sectionId } = section;
 
     return (
-      <MenuItem
-        key={route || oldFrontendPath}
-        // TODO improve typing
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        component={route ? RouterLink : undefined}
-        to={route || undefined}
-        className={classNames({
-          [classes.activeUiSectionLink]: route === location.pathname,
-        })}
-      >
-        {t(labelKey)}
-      </MenuItem>
+      <a key={sectionId} href={`#${sectionId}`}>
+        <MenuItem
+          className={classNames({
+            [classes.activeUiSectionLink]: false,
+          })}
+        >
+          {t(labelKey)}
+        </MenuItem>
+      </a>
     );
   };
 
@@ -185,10 +179,10 @@ const Header: FC = () => {
   );
 
   return (
-    <Box id={SECTION__TOP}>
+    <>
       {upLg ? appBar : <HideOnScrollDown>{appBar}</HideOnScrollDown>}
       {renderMobileMenu}
-    </Box>
+    </>
   );
 };
 
