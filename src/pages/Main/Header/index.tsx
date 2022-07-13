@@ -20,8 +20,8 @@ import classNames from 'classnames';
 import { COLOR__LIGHT_GREY } from 'src/theme';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
+import logo from 'src/assets/logo.png';
 import { ROUTE__TEST } from '../../../routes/routes';
-import { getLogoImg } from '../../../components/logo';
 
 interface UiSection {
   labelKey: string;
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     logo: {
-      height: 40,
+      height: 48,
       // small decorative tweak
       marginTop: theme.spacing(1) * -1,
     },
@@ -156,7 +156,7 @@ const Header: FC = () => {
     <AppBar position="sticky" color="inherit">
       <Toolbar>
         {/* Logo */}
-        <img src={getLogoImg()} alt="logo" className={classes.logo} />
+        <img src={logo} alt="logo" className={classes.logo} />
 
         {/* Growing empty placeholder */}
         <div className={classes.grow} />
