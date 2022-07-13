@@ -1,5 +1,6 @@
 import React, { FC, memo } from 'react';
 import { Box, makeStyles } from '@material-ui/core';
+import { SECTION__CONTACTS } from 'src/pages/Main/sectionIds';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,7 +12,11 @@ const useStyles = makeStyles(theme => ({
 const Contacts: FC = () => {
   const classes = useStyles();
 
-  return <Box className={classes.root}>Contacts</Box>;
+  return (
+    <Box id={SECTION__CONTACTS} className={classes.root}>
+      Contacts
+    </Box>
+  );
 };
 
 export default memo(Contacts);

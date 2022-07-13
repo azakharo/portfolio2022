@@ -1,5 +1,6 @@
 import React, { FC, memo } from 'react';
 import { Box, makeStyles } from '@material-ui/core';
+import { SECTION__EXAMPLES } from 'src/pages/Main/sectionIds';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,7 +12,11 @@ const useStyles = makeStyles(theme => ({
 const Examples: FC = () => {
   const classes = useStyles();
 
-  return <Box className={classes.root}>Examples</Box>;
+  return (
+    <Box id={SECTION__EXAMPLES} className={classes.root}>
+      Examples
+    </Box>
+  );
 };
 
 export default memo(Examples);

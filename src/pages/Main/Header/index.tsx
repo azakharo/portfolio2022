@@ -20,8 +20,8 @@ import { COLOR__LIGHT_GREY } from 'src/theme';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import logo from 'src/assets/logo.png';
-import { ROUTE__TEST } from 'src/routes/routes';
 import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
+import { SECTION__TOP } from 'src/pages/Main/sectionIds';
 
 interface UiSection {
   labelKey: string;
@@ -30,10 +30,6 @@ interface UiSection {
 }
 
 const uiSections: UiSection[] = [
-  {
-    labelKey: 'header__menuItem__Top',
-    route: ROUTE__TEST,
-  },
   {
     labelKey: 'header__menuItem__About',
     oldFrontendPath: '/schdule',
@@ -189,10 +185,10 @@ const Header: FC = () => {
   );
 
   return (
-    <>
+    <Box id={SECTION__TOP}>
       {upLg ? appBar : <HideOnScrollDown>{appBar}</HideOnScrollDown>}
       {renderMobileMenu}
-    </>
+    </Box>
   );
 };
 
