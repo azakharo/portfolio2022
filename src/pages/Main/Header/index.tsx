@@ -17,11 +17,11 @@ import { useTranslation } from 'react-i18next';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import classNames from 'classnames';
 
-import logo from 'src/assets/logo.svg';
 import { COLOR__LIGHT_GREY } from 'src/theme';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import { ROUTE__TEST } from '../../../routes/routes';
+import { getLogoImg } from '../../../components/logo';
 
 interface UiSection {
   labelKey: string;
@@ -156,7 +156,7 @@ const Header: FC = () => {
     <AppBar position="sticky" color="inherit">
       <Toolbar>
         {/* Logo */}
-        <img src={logo} alt="logo" className={classes.logo} />
+        <img src={getLogoImg()} alt="logo" className={classes.logo} />
 
         {/* Growing empty placeholder */}
         <div className={classes.grow} />
