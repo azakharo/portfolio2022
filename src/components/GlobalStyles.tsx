@@ -15,6 +15,10 @@ const useStyles = makeStyles(
           '-moz-osx-font-smoothing': 'grayscale',
           width: '100%',
           fontFamily: `${mainFontFamily}, sans-serif`,
+          // The following is necessary for the navigation via links in the header.
+          // The header has some height.
+          scrollPaddingTop: '64px',
+          scrollBehavior: 'smooth',
         },
         body: {
           width: '100%',
