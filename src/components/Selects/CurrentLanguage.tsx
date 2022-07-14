@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useCallback } from 'react';
 import { Box, MenuItem, Select } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
@@ -26,14 +26,19 @@ const CurrentLanguageSelect: FC<Props> = ({ className }) => {
   const [, i18n] = useTranslation();
   const curLang = i18n.language;
 
-  const handleChangeLanguage = async (newLang: string) => {
-    await i18n.changeLanguage(newLang);
-  };
+  const handleChange = useCallback(
+    async e => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      const newLang = e?.target?.value as string;
+      await i18n.changeLanguage(newLang);
+    },
+    [i18n],
+  );
 
   return (
     <Select
       value={curLang || ''}
-      onChange={e => handleChangeLanguage(e.target.value as string)}
+      onChange={handleChange}
       className={className}
       renderValue={renderValue}
     >
