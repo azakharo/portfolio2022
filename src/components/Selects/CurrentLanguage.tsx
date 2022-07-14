@@ -19,7 +19,14 @@ const renderValue = (value: unknown) => {
     return langCode;
   }
 
-  return langData.label;
+  return (
+    <Box display="flex">
+      <Box mr={1}>
+        <img src={flags[langData.icon]} alt={`${langData.label} flag`} />
+      </Box>
+      <span>{langData.label}</span>
+    </Box>
+  );
 };
 
 const CurrentLanguageSelect: FC<Props> = ({ className }) => {
