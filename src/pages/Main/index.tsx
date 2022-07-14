@@ -1,6 +1,7 @@
 import React, { FC, memo } from 'react';
 import { Helmet } from 'react-helmet';
 
+import ScrollTopButton from 'src/components/Buttons/ScrollTop';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -22,6 +23,8 @@ const Main: FC = () => (
     <Specialization />
     <Examples />
     <Contacts />
+
+    <ScrollTopButton />
   </>
 );
 
