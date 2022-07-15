@@ -3,7 +3,13 @@ import { Helmet } from 'react-helmet';
 import useScrollSpy from 'react-use-scrollspy';
 
 import ScrollTopButton from 'src/components/Buttons/ScrollTop';
-import { SECTION__PICTURE } from 'src/pages/Main/sectionIds';
+import {
+  SECTION__ABOUT,
+  SECTION__EXAMPLES,
+  SECTION__PICTURE,
+  SECTION__SKILLS,
+  SECTION__SPECIALIZATION,
+} from 'src/pages/Main/sectionIds';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -33,23 +39,23 @@ const Main: FC = () => {
 
       <Header activeSectionIndex={activeSectionIndex} />
 
-      <section ref={sectionRefs[0]}>
+      <section ref={sectionRefs[0]} id={SECTION__PICTURE}>
         <Picture />
       </section>
 
-      <section ref={sectionRefs[1]}>
+      <section ref={sectionRefs[1]} id={SECTION__ABOUT}>
         <About />
       </section>
 
-      <section ref={sectionRefs[2]}>
+      <section ref={sectionRefs[2]} id={SECTION__SKILLS}>
         <Skills />
       </section>
 
-      <section ref={sectionRefs[3]}>
+      <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
         <Specialization />
       </section>
 
-      <section ref={sectionRefs[4]}>
+      <section ref={sectionRefs[4]} id={SECTION__EXAMPLES}>
         <Examples />
       </section>
 
