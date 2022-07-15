@@ -111,13 +111,25 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
     setMobileMenuAnchorEl(null);
   };
 
+  const handleSectionClick = (sectionId: string) => {
+    // eslint-disable-next-line unicorn/prefer-query-selector
+    const sectionElem = document.getElementById(sectionId);
+
+    if (sectionElem) {
+      sectionElem.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   const renderUiSectionLink = (section: UiSection, index: number) => {
     const { sectionId, labelKey } = section;
 
     return (
       <Button
         key={sectionId}
-        href={`#${sectionId}`}
+        onClick={() => handleSectionClick(sectionId)}
         className={classNames({
           [classes.activeUiSectionLink]: index === activeSectionIndex,
         })}
@@ -134,15 +146,15 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
     const { labelKey, sectionId } = section;
 
     return (
-      <a key={sectionId} href={`#${sectionId}`}>
-        <MenuItem
-          className={classNames({
-            [classes.activeUiSectionLink]: index === activeSectionIndex,
-          })}
-        >
-          {t(labelKey)}
-        </MenuItem>
-      </a>
+      <MenuItem
+        key={sectionId}
+        onClick={() => handleSectionClick(sectionId)}
+        className={classNames({
+          [classes.activeUiSectionLink]: index === activeSectionIndex,
+        })}
+      >
+        {t(labelKey)}
+      </MenuItem>
     );
   };
 
