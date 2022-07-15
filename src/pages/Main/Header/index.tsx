@@ -148,7 +148,12 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
     return (
       <MenuItem
         key={sectionId}
-        onClick={() => handleSectionClick(sectionId)}
+        onClick={() => {
+          handleSectionClick(sectionId);
+          setTimeout(() => {
+            handleMobileMenuClose();
+          }, 500);
+        }}
         className={classNames({
           [classes.activeUiSectionLink]: index === activeSectionIndex,
         })}
