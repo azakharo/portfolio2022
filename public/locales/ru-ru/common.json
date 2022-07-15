@@ -8,8 +8,10 @@
   "header__menuItem__About": "Обо мне",
   "header__menuItem__Contacts": "Контакты",
   "header__menuItem__Examples": "Примеры работ",
+  "header__menuItem__Skills": "Навыки",
   "header__menuItem__Specialization": "Моя специализация",
-  "header__menuItem__Top": "Начало",
+  "header__menuItem__ToBeginning": "",
+  "header__menuItem__Top": "В начало",
   "loadingMessage": "Загрузка...",
   "noDataMessage": "Нет данных"
 }

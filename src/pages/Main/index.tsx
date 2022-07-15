@@ -1,7 +1,9 @@
 import React, { FC, memo } from 'react';
 import { Helmet } from 'react-helmet';
+import { makeStyles } from '@material-ui/core';
 
 import ScrollTopButton from 'src/components/Buttons/ScrollTop';
+import { SECTION__PICTURE } from 'src/pages/Main/sectionIds';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -10,22 +12,32 @@ import Specialization from './Specialization';
 import Examples from './Examples';
 import Contacts from './Contacts';
 
-const Main: FC = () => (
-  <>
-    <Helmet>
-      <title>AZA - Portfolio</title>
-    </Helmet>
+const useStyles = makeStyles(theme => ({
+  activeNavItem: {
+    backgroundColor: theme.palette.action.active,
+  },
+}));
 
-    <Header />
-    <Picture />
-    <About />
-    <Skills />
-    <Specialization />
-    <Examples />
-    <Contacts />
+const Main: FC = () => {
+  const classes = useStyles();
 
-    <ScrollTopButton />
-  </>
-);
+  return (
+    <>
+      <Helmet>
+        <title>AZA - Portfolio</title>
+      </Helmet>
+
+      <Header />
+      <Picture />
+      <About />
+      <Skills />
+      <Specialization />
+      <Examples />
+      <Contacts />
+
+      <ScrollTopButton topSectionId={SECTION__PICTURE} />
+    </>
+  );
+};
 
 export default memo(Main);

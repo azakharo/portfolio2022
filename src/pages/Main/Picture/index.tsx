@@ -1,6 +1,7 @@
 import React, { FC, memo } from 'react';
 import { Box, makeStyles } from '@material-ui/core';
-import { SECTION__TOP } from 'src/pages/Main/sectionIds';
+
+import { SECTION__PICTURE } from 'src/pages/Main/sectionIds';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,7 +14,7 @@ const Picture: FC = () => {
   const classes = useStyles();
 
   return (
-    <Box id={SECTION__TOP} className={classes.root}>
+    <Box id={SECTION__PICTURE} className={classes.root}>
       Picture
     </Box>
   );

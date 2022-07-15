@@ -1,7 +1,6 @@
 import React, { FC, memo, useCallback } from 'react';
 import { Fab, makeStyles, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import { SECTION__TOP } from 'src/pages/Main/sectionIds';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,7 +10,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const ScrollTop: FC = () => {
+interface Props {
+  topSectionId: string;
+}
+
+const ScrollTop: FC<Props> = ({ topSectionId }) => {
   const classes = useStyles();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -20,12 +23,12 @@ const ScrollTop: FC = () => {
 
   const handleClick = useCallback(() => {
     // eslint-disable-next-line unicorn/prefer-query-selector
-    const anchor = document.getElementById(SECTION__TOP);
+    const anchor = document.getElementById(topSectionId);
 
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  }, []);
+  }, [topSectionId]);
 
   return (
     <Zoom in={trigger}>

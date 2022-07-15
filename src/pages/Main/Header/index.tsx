@@ -24,7 +24,9 @@ import {
   SECTION__ABOUT,
   SECTION__CONTACTS,
   SECTION__EXAMPLES,
+  SECTION__SKILLS,
   SECTION__SPECIALIZATION,
+  SECTION__PICTURE,
 } from 'src/pages/Main/sectionIds';
 
 interface UiSection {
@@ -34,8 +36,16 @@ interface UiSection {
 
 const uiSections: UiSection[] = [
   {
+    labelKey: 'header__menuItem__ToBeginning',
+    sectionId: SECTION__PICTURE,
+  },
+  {
     labelKey: 'header__menuItem__About',
     sectionId: SECTION__ABOUT,
+  },
+  {
+    labelKey: 'header__menuItem__Skills',
+    sectionId: SECTION__SKILLS,
   },
   {
     labelKey: 'header__menuItem__Specialization',
