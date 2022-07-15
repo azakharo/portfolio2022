@@ -1,6 +1,6 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { makeStyles } from '@material-ui/core';
+import useScrollSpy from 'react-use-scrollspy';
 
 import ScrollTopButton from 'src/components/Buttons/ScrollTop';
 import { SECTION__PICTURE } from 'src/pages/Main/sectionIds';
@@ -12,14 +12,18 @@ import Specialization from './Specialization';
 import Examples from './Examples';
 import Contacts from './Contacts';
 
-const useStyles = makeStyles(theme => ({
-  activeNavItem: {
-    backgroundColor: theme.palette.action.active,
-  },
-}));
-
 const Main: FC = () => {
-  const classes = useStyles();
+  const sectionRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
+  const activeSectionIndex = useScrollSpy({
+    sectionElementRefs: sectionRefs,
+    offsetPx: -80,
+  });
 
   return (
     <>
@@ -27,12 +31,28 @@ const Main: FC = () => {
         <title>AZA - Portfolio</title>
       </Helmet>
 
-      <Header />
-      <Picture />
-      <About />
-      <Skills />
-      <Specialization />
-      <Examples />
+      <Header activeSectionIndex={activeSectionIndex} />
+
+      <section ref={sectionRefs[0]}>
+        <Picture />
+      </section>
+
+      <section ref={sectionRefs[1]}>
+        <About />
+      </section>
+
+      <section ref={sectionRefs[2]}>
+        <Skills />
+      </section>
+
+      <section ref={sectionRefs[3]}>
+        <Specialization />
+      </section>
+
+      <section ref={sectionRefs[4]}>
+        <Examples />
+      </section>
+
       <Contacts />
 
       <ScrollTopButton topSectionId={SECTION__PICTURE} />

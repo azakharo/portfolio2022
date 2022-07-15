@@ -89,7 +89,11 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const Header: FC = () => {
+interface Props {
+  activeSectionIndex: number;
+}
+
+const Header: FC<Props> = ({ activeSectionIndex }) => {
   const classes = useStyles();
   const [t] = useTranslation();
   const upLg = useMediaQueryPatched((theme: Theme) =>
@@ -107,7 +111,7 @@ const Header: FC = () => {
     setMobileMenuAnchorEl(null);
   };
 
-  const renderUiSectionLink = (section: UiSection) => {
+  const renderUiSectionLink = (section: UiSection, index: number) => {
     const { sectionId, labelKey } = section;
 
     return (
@@ -115,7 +119,7 @@ const Header: FC = () => {
         key={sectionId}
         href={`#${sectionId}`}
         className={classNames({
-          [classes.activeUiSectionLink]: false,
+          [classes.activeUiSectionLink]: index === activeSectionIndex,
         })}
       >
         {t(labelKey)}
@@ -123,14 +127,17 @@ const Header: FC = () => {
     );
   };
 
-  const renderUiSectionLinkForMobileMenu = (section: UiSection) => {
+  const renderUiSectionLinkForMobileMenu = (
+    section: UiSection,
+    index: number,
+  ) => {
     const { labelKey, sectionId } = section;
 
     return (
       <a key={sectionId} href={`#${sectionId}`}>
         <MenuItem
           className={classNames({
-            [classes.activeUiSectionLink]: false,
+            [classes.activeUiSectionLink]: index === activeSectionIndex,
           })}
         >
           {t(labelKey)}
@@ -150,7 +157,9 @@ const Header: FC = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {uiSections.map(section => renderUiSectionLinkForMobileMenu(section))}
+      {uiSections.map((section, index) =>
+        renderUiSectionLinkForMobileMenu(section, index),
+      )}
     </Menu>
   );
 
@@ -169,7 +178,9 @@ const Header: FC = () => {
 
         {/* Menu shown for desktop */}
         <div className={classes.sectionDesktop}>
-          {uiSections.map(section => renderUiSectionLink(section))}
+          {uiSections.map((section, index) =>
+            renderUiSectionLink(section, index),
+          )}
         </div>
 
         {/* More button shown for small screens */}

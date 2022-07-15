@@ -4,7 +4,7 @@ import { SECTION__EXAMPLES } from 'src/pages/Main/sectionIds';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minHeight: 400,
+    minHeight: 800,
     backgroundColor: theme.palette.action.active,
   },
 }));
