@@ -28,7 +28,7 @@ const Main: FC = () => {
   ];
   const activeSectionIndex = useScrollSpy({
     sectionElementRefs: sectionRefs,
-    offsetPx: -64, // height of the header
+    offsetPx: -80, // height of the header + some gap
   });
 
   return (
