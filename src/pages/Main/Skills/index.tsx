@@ -1,5 +1,6 @@
 import React, { FC, memo } from 'react';
-import { Box, Container, LinearProgress, makeStyles } from '@material-ui/core';
+import { Box, Container } from '@material-ui/core';
+import Progress from './Progress';
 
 const skills = [
   {
@@ -36,39 +37,19 @@ const skills = [
   },
 ];
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    minHeight: 400,
-    backgroundColor: theme.palette.primary.dark,
-  },
-}));
-
-const Skills: FC = () => {
-  const classes = useStyles();
-
+const Skills: FC = () => (
   // This component repeats the layout of the About comp.
-  return (
-    <Container maxWidth="lg">
-      <Box display="flex" p={4} gridGap={40}>
-        <Box flex={1} />
-        <Box flex={2}>
-          {skills.map(({ name, value }) => (
-            <Box key={name} mb={2}>
-              <Box mb={1} display="flex" justifyContent="space-between">
-                <span>{name}</span>
-                <span>{value}%</span>
-              </Box>
-              <LinearProgress
-                variant="determinate"
-                color="secondary"
-                value={value}
-              />
-            </Box>
-          ))}
-        </Box>
+  <Container maxWidth="lg">
+    <Box display="flex" p={4} gridGap={40}>
+      <Box flex={1} />
+      <Box flex={2}>
+        {skills.map(({ name, value }) => (
+          <Box key={name} mb={2}>
+            <Progress label={name} value={value} />
+          </Box>
+        ))}
       </Box>
-    </Container>
-  );
-};
-
+    </Box>
+  </Container>
+);
 export default memo(Skills);
