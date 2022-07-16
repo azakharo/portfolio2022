@@ -33,7 +33,7 @@ const ScrollTop: FC<Props> = ({ topSectionId }) => {
   return (
     <Zoom in={trigger}>
       <Fab
-        color="secondary"
+        color="primary"
         size="small"
         aria-label="scroll back to top"
         onClick={handleClick}

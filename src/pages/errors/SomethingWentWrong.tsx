@@ -63,7 +63,7 @@ const FrontendError: FC = () => {
 
         <Box mt={6} display="flex" justifyContent="center">
           <Button
-            color="secondary"
+            color="primary"
             component={RouterLink}
             to="/"
             variant="outlined"

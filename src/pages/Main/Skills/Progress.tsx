@@ -1,11 +1,19 @@
 import random from 'lodash/random';
 import React, { FC, memo, useMemo, useState } from 'react';
-import { Box, LinearProgress } from '@material-ui/core';
+import { Box, LinearProgress, makeStyles } from '@material-ui/core';
 import useInterval from 'ahooks/lib/useInterval';
 
-// const useStyles = makeStyles(theme => ({
-//   root: {},
-// }));
+const useStyles = makeStyles(theme => ({
+  root: {
+    height: 3,
+    borderRadius: 3,
+    backgroundColor: theme.palette.grey[300],
+  },
+  bar: {
+    borderRadius: 3,
+    backgroundColor: '#1a90ff',
+  },
+}));
 
 interface Props {
   label: string;
@@ -13,6 +21,7 @@ interface Props {
 }
 
 const Progress: FC<Props> = ({ label, value }) => {
+  const classes = useStyles();
   const interval = useMemo(() => random(1, 5, false) * 10, []); // ms
 
   const [currentValue, setCurrentValue] = useState(0);
@@ -24,8 +33,6 @@ const Progress: FC<Props> = ({ label, value }) => {
     }
   }, interval);
 
-  // const classes = useStyles();
-
   // This component repeats the layout of the About comp.
   return (
     <>
@@ -33,7 +40,14 @@ const Progress: FC<Props> = ({ label, value }) => {
         <span>{label}</span>
         <span>{currentValue}%</span>
       </Box>
-      <LinearProgress variant="determinate" value={currentValue} />
+      <LinearProgress
+        variant="determinate"
+        value={currentValue}
+        classes={{
+          root: classes.root,
+          bar: classes.bar,
+        }}
+      />
     </>
   );
 };
