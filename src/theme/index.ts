@@ -1,5 +1,10 @@
 import merge from 'lodash/merge';
-import { colors, createTheme, Theme } from '@material-ui/core';
+import {
+  colors,
+  createTheme,
+  responsiveFontSizes,
+  Theme,
+} from '@material-ui/core';
 
 import { THEMES } from './constants';
 import { softShadows, strongShadows } from './shadows';
@@ -235,18 +240,16 @@ export interface ThemeConfig {
 export const createAppTheme = (config: ThemeConfig): Theme => {
   const themeOptions = themesOptions.find(theme => theme.name === config.theme);
 
-  const theme = createTheme(
+  let theme = createTheme(
     /* eslint-disable @typescript-eslint/ban-ts-comment,@typescript-eslint/no-unsafe-call */
     // @ts-ignore
     merge({}, baseOptions, themeOptions, { direction: config.direction }),
     /* eslint-enable @typescript-eslint/ban-ts-comment,@typescript-eslint/no-unsafe-call */
   );
 
-  // AZA:
-  // Have to comment this, because it reduces header font-size even on lg screens
-  // if (config.responsiveFontSizes) {
-  //   theme = responsiveFontSizes(theme);
-  // }
+  if (config.responsiveFontSizes) {
+    theme = responsiveFontSizes(theme);
+  }
 
   return theme;
 };
