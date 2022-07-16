@@ -7,9 +7,8 @@ import typography from './typography';
 
 const SPACING = 5; // px
 
-const COLOR__BRAND_NORMAL = '#ffe60a';
-const COLOR__BRAND_DARK = '#de9d05';
-const COLOR__BRAND_SECONDARY = '#6e46ff';
+const COLOR__BRAND_NORMAL = '#6e46ff';
+const COLOR__BRAND_SECONDARY = '#ffe60a';
 
 // const COLOR__ACCENT = undefined;
 // const colorAccent = COLOR__ACCENT || COLOR__BRAND_NORMAL;
@@ -18,7 +17,6 @@ export const COLOR__LIGHT_GREY = '#f1f0f2';
 export const COLOR__DARK_GREY = '#e2e1e7';
 
 const darkThemeBrandNormalColor = COLOR__BRAND_NORMAL;
-const darkThemeBrandDarkColor = COLOR__BRAND_DARK;
 const darkThemeAccentColor = darkThemeBrandNormalColor;
 
 const inputFocusedColor = '#000';
@@ -165,7 +163,6 @@ const themesOptions = [
       },
       primary: {
         main: COLOR__BRAND_NORMAL,
-        dark: COLOR__BRAND_DARK,
         contrastText: COLOR__TEXT_PRIMARY,
       },
       secondary: {
@@ -214,7 +211,6 @@ const themesOptions = [
       },
       primary: {
         main: darkThemeBrandNormalColor,
-        dark: darkThemeBrandDarkColor,
         contrastText: '#fff',
       },
       secondary: {

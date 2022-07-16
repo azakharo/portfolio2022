@@ -33,11 +33,7 @@ const Progress: FC<Props> = ({ label, value }) => {
         <span>{label}</span>
         <span>{currentValue}%</span>
       </Box>
-      <LinearProgress
-        variant="determinate"
-        color="secondary"
-        value={currentValue}
-      />
+      <LinearProgress variant="determinate" value={currentValue} />
     </>
   );
 };
