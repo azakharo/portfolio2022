@@ -4,27 +4,35 @@ import Progress from './Progress';
 
 const skills = [
   {
-    name: 'Javascript, ES6, 7, 8... Babel, Webpack',
-    value: 90,
-  },
-  {
-    name: 'React.js, Redux, redux-thunk, redux-saga',
+    name: 'HTML',
     value: 85,
   },
   {
-    name: 'Vue, vuex',
-    value: 65,
-  },
-  {
-    name: 'AngularJS',
-    value: 75,
-  },
-  {
-    name: 'HTML, Pug',
+    name: 'CSS, PostCSS, preprocessors',
     value: 80,
   },
   {
-    name: 'CSS, Less, PostCSS',
+    name: 'Javascript, including latest features',
+    value: 90,
+  },
+  {
+    name: 'Typescript',
+    value: 70,
+  },
+  {
+    name: 'React.js',
+    value: 90,
+  },
+  {
+    name: 'Redux, redux-thunk, redux-saga',
+    value: 80,
+  },
+  {
+    name: 'Build tools: Webpack, Babel, ESLint, etc.',
+    value: 85,
+  },
+  {
+    name: 'Testing: unit, integration, E2E',
     value: 80,
   },
   {
@@ -32,8 +40,8 @@ const skills = [
     value: 85,
   },
   {
-    name: 'Node.js, Express.js, MongoDB',
-    value: 75,
+    name: 'Server-side: Node.js, Express.js, MongoDB',
+    value: 70,
   },
 ];
 
