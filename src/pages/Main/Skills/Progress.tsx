@@ -1,5 +1,5 @@
 import random from 'lodash/random';
-import React, { FC, memo, useMemo, useState } from 'react';
+import React, { FC, memo, ReactNode, useMemo, useState } from 'react';
 import { Box, LinearProgress, makeStyles } from '@material-ui/core';
 import useInterval from 'ahooks/lib/useInterval';
 
@@ -18,9 +18,10 @@ const useStyles = makeStyles(theme => ({
 interface Props {
   label: string;
   value: number;
+  icon?: ReactNode;
 }
 
-const Progress: FC<Props> = ({ label, value }) => {
+const Progress: FC<Props> = ({ label, value, icon }) => {
   const classes = useStyles();
   const interval = useMemo(() => random(1, 5, false) * 10, []); // ms
 
@@ -37,7 +38,10 @@ const Progress: FC<Props> = ({ label, value }) => {
   return (
     <>
       <Box mb={1} display="flex" justifyContent="space-between">
-        <span>{label}</span>
+        <Box display="flex" alignItems="center">
+          {icon && <>{icon}&nbsp;</>}
+          <span>{label}</span>
+        </Box>
         <span>{currentValue}%</span>
       </Box>
       <LinearProgress
