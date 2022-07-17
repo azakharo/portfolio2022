@@ -1,5 +1,6 @@
 import React, { FC, memo, useRef } from 'react';
 import { Helmet } from 'react-helmet';
+import { Box } from '@material-ui/core';
 import useScrollSpy from 'react-use-scrollspy';
 
 import ScrollTopButton from 'src/components/Buttons/ScrollTop';
@@ -34,7 +35,7 @@ const Main: FC = () => {
   return (
     <>
       <Helmet>
-        <title>AZA - Portfolio</title>
+        <title>azakharov</title>
       </Helmet>
 
       <Header activeSectionIndex={activeSectionIndex} />
@@ -52,7 +53,9 @@ const Main: FC = () => {
       </section>
 
       <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
-        <Specialization />
+        <Box mt={4} mb={10}>
+          <Specialization />
+        </Box>
       </section>
 
       <section ref={sectionRefs[4]} id={SECTION__EXAMPLES}>

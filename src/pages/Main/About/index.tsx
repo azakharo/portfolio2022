@@ -2,18 +2,21 @@ import React, { FC, memo } from 'react';
 import { Box, Container, Typography } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
+import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
+
 const About: FC = () => {
   const [t] = useTranslation();
+  const isSingleColumn = useIsSingleColumnMode();
 
   return (
     <Container maxWidth="lg">
-      <Box display="flex" p={4} gridGap={40}>
-        <Box flex={1} textAlign="center">
+      <Box display={isSingleColumn ? undefined : 'flex'} p={4} gridGap={40}>
+        <Box flex={1} textAlign="center" pb={2}>
           <Typography variant="h2" color="textPrimary">
-            {t('about__title', 'Привет!')}
+            {t('about__title')}
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
-            {t('about__subTitle', 'немного о себе...')}
+            {t('about__subTitle')}
           </Typography>
         </Box>
         <Box flex={2}>

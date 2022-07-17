@@ -17,6 +17,7 @@ import {
 } from 'react-icons/si';
 import { RiLayoutMasonryLine } from 'react-icons/ri';
 
+import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import Progress from './Progress';
 
 const skills = [
@@ -78,19 +79,23 @@ const skills = [
   },
 ];
 
-const Skills: FC = () => (
-  // This component repeats the layout of the About comp.
-  <Container maxWidth="lg">
-    <Box display="flex" p={4} gridGap={40}>
-      <Box flex={1} />
-      <Box flex={2}>
-        {skills.map(({ name, value, icon }) => (
-          <Box key={name} mb={2}>
-            <Progress label={name} value={value} icon={icon} />
-          </Box>
-        ))}
+const Skills: FC = () => {
+  const isSingleColumn = useIsSingleColumnMode();
+
+  return (
+    // This component repeats the layout of the About comp.
+    <Container maxWidth="lg">
+      <Box display="flex" p={4} gridGap={40}>
+        {!isSingleColumn && <Box flex={1} />}
+        <Box flex={2}>
+          {skills.map(({ name, value, icon }) => (
+            <Box key={name} mb={2}>
+              <Progress label={name} value={value} icon={icon} />
+            </Box>
+          ))}
+        </Box>
       </Box>
-    </Box>
-  </Container>
-);
+    </Container>
+  );
+};
 export default memo(Skills);
