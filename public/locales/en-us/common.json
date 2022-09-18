@@ -9,6 +9,8 @@
   "defaultErrorMessage": "Something went wrong",
   "errorMessage__pageNotFound": "Page Not Found",
   "errorPage404__hint__wrongUrl": "Probably you specified a wrong URL",
+  "example__subTitle": "Click on the pictures to get additional information",
+  "examples__title": "My projects",
   "header__menuItem__About": "About",
   "header__menuItem__Contacts": "Contacts",
   "header__menuItem__Examples": "Examples",

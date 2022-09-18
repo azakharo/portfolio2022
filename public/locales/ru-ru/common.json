@@ -9,6 +9,8 @@
   "defaultErrorMessage": "Что-то пошло не так",
   "errorMessage__pageNotFound": "Страница не найдена",
   "errorPage404__hint__wrongUrl": "Возможно, вы указали неверный URL",
+  "example__subTitle": "Кликните на картинке для получения деталей",
+  "examples__title": "Примеры работ",
   "header__menuItem__About": "Обо мне",
   "header__menuItem__Contacts": "Контакты",
   "header__menuItem__Examples": "Примеры работ",
