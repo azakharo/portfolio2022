@@ -70,6 +70,7 @@ const Specialization: FC = () => {
             />
           </Typography>
         </Box>
+
         <Box flex={2} display="flex" flexWrap="wrap">
           {specializations.map(
             ({ title, titleKey, icon, textKey, backgroundColor }) => (

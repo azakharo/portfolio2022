@@ -23,12 +23,14 @@ const Card: FC<Props> = ({
 
   return (
     <Box px={4} style={{ backgroundColor: backgroundColor || 'white' }} py={2}>
-      <Box mb={2}>{icon}</Box>
-      <Box mb={2}>
+      <Box mb={2} display="flex" alignItems="center">
+        <Box mr={2}>{icon}</Box>
+
         <Typography variant="h5" color="textPrimary">
           {getLabel(t, titleKey, title)}
         </Typography>
       </Box>
+
       <Box>
         <Typography variant="body1" color="textSecondary">
           {t(textKey)}
