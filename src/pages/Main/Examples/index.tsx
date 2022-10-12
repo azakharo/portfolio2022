@@ -5,6 +5,8 @@ import { Box, Container, makeStyles, Typography } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
+import { examples } from './config';
+import Example from './Example';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -12,6 +14,7 @@ const useStyles = makeStyles(() => ({
     display: 'grid',
     gridGap: '10px',
     gridTemplateColumns: 'repeat(3, 1fr)',
+    alignItems: 'flex-start',
 
     '& > img': {
       width: '100%',
@@ -51,14 +54,9 @@ const Examples: FC = () => {
 
         {/* right column - example cards */}
         <Box flex={2} className={classes.grid}>
-          <img src="https://picsum.photos/id/237/400/200" />
-          <img src="https://picsum.photos/id/237/400/200" />
-          <img src="https://picsum.photos/id/237/400/200" />
-          <img src="https://picsum.photos/id/237/400/200" />
-          <img src="https://picsum.photos/id/1074/400/200" />
-          <img src="https://picsum.photos/id/1074/400/200" />
-          <img src="https://picsum.photos/id/1074/400/200" />
-          <img src="https://picsum.photos/id/1074/400/200" />
+          {examples.map(ex => (
+            <Example key={ex.name} data={ex} />
+          ))}
         </Box>
       </Box>
     </Container>
