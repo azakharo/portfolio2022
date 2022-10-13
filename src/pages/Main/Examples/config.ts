@@ -15,10 +15,10 @@ import votumImg from 'src/assets/examples/votum.png';
 import asrImg from 'src/assets/examples/asr.png';
 
 export interface ExampleData {
-  name: string;
+  nameKey: string;
   imgPath: string;
   urls: string[];
-  desc: string;
+  descKey: string;
   tags: string[];
   year: number;
   customer: string;
@@ -26,7 +26,7 @@ export interface ExampleData {
 
 export const examples: ExampleData[] = [
   {
-    name: 'NovaKid - новый кабинет родителя',
+    nameKey: 'examples__novakid__name',
     imgPath: novakidImg,
     urls: [
       'https://disk.yandex.ru/i/ALLvxAb3ivADwg',
@@ -34,7 +34,7 @@ export const examples: ExampleData[] = [
       'https://disk.yandex.ru/i/TE_Cel2rAHaABQ',
       'https://disk.yandex.ru/i/_fWBaa9GtfjoLw',
     ],
-    desc: 'Frontend на React.js и Material UI. Интерфейс для управления подпиской, бронирования уроков, мониторинга успехов ребёнка и т.д.',
+    descKey: 'examples__novakid__description',
     tags: [
       'React.js',
       'material-ui',
@@ -54,7 +54,7 @@ export const examples: ExampleData[] = [
     customer: 'NovaKid',
   },
   {
-    name: 'Новая админка Cloudike',
+    nameKey: 'examples__cloudike__name',
     imgPath: cloudikeImg,
     urls: [
       'https://www.loom.com/share/57abda2591c1470db5e8e9209f820cd8',
@@ -62,7 +62,7 @@ export const examples: ExampleData[] = [
       'https://www.loom.com/share/a81ed8deeb3a4d1887fa0fb4285d5d7e',
       'https://www.loom.com/share/50194355a0d845839f12f0bf6ca4bfb8',
     ],
-    desc: 'Frontend на React.js. Material UI. Интерфейс для управления бэкендом Cloudike. Что такое Cloudike? - cloudike.com',
+    descKey: 'examples__cloudike__description',
     tags: [
       'React.js',
       'material-ui',
@@ -83,13 +83,13 @@ export const examples: ExampleData[] = [
     customer: 'ASD Technologies',
   },
   {
-    name: 'Новая консоль управления Облака КРОК',
+    nameKey: 'examples__croc__name',
     imgPath: crocImg,
     urls: [
       'https://www.loom.com/share/68b021f3378b4d56a37df0957fe32291',
       'https://www.loom.com/share/a5b9f049a87145d3a4c1349454a4a2a8',
     ],
-    desc: 'Frontend на React.js, Redux. Интерфейс для управления ресурсами в облаке: создание виртуальных машин, управление дисками, выделение машинам "белых" IP-шников, организация подсетей, управление доступом и многое другое',
+    descKey: 'examples__croc__description',
     tags: [
       'React.js',
       'Redux',
@@ -112,19 +112,19 @@ export const examples: ExampleData[] = [
     customer: 'КРОК',
   },
   {
-    name: 'Сервис Речевой Аналитики',
+    nameKey: 'examples__mentor__name',
     imgPath: mentorImg,
     urls: ['https://mentor-pi.vercel.app/'],
-    desc: 'Frontend на React.js, Redux, RxJS. Прослушивание записей телефонных переговоров, просмотр и изучение результатов анализа речи. Wave-форма, тайм-лайны.',
+    descKey: 'examples__mentor__description',
     tags: ['React.js', 'Redux', 'RxJS', 'es6', 'Webpack', 'create-react-app'],
     year: 2017,
     customer: 'ИТЦ Система-Саров',
   },
   {
-    name: 'Dashboard',
+    nameKey: 'examples__mordovia__name',
     imgPath: mordoviaImg,
     urls: ['https://dashboard-page2.herokuapp.com'],
-    desc: 'Мордовия, пилотный проект системы обработки ЕСЭК (Единой Социальной Электронной Карты) для транспортных приложений.',
+    descKey: 'examples__mordovia__description',
     tags: [
       'angular.js',
       'javascript',
@@ -138,10 +138,10 @@ export const examples: ExampleData[] = [
     customer: 'Правительство Республики Мордовия',
   },
   {
-    name: 'Мониторинг оборудования на автобусах/троллейбусах',
+    nameKey: 'examples__uptime__name',
     imgPath: uptimeImg,
     urls: ['https://aza-uptime.herokuapp.com'],
-    desc: 'Мордовия, пилотный проект системы обработки ЕСЭК (Единой Социальной Электронной Карты) для транспортных приложений.',
+    descKey: 'examples__novakid__description',
     tags: [
       'angular.js',
       'javascript',
@@ -155,23 +155,23 @@ export const examples: ExampleData[] = [
     customer: 'Правительство Республики Мордовия',
   },
   {
-    name: 'ДО-РА, мобильный дозиметр-радиометр',
+    nameKey: 'examples__dora__name',
     imgPath: doraImg,
     urls: [
       'http://www.windowsphone.com/ru-ru/store/app/do-ra/237e80e8-e719-4fcf-a824-db7db15c129f',
     ],
-    desc: 'Мобильное приложение для Windows Phone. Мобильное приложение на JavaME. Измерение текущего значения радиационного фона с помощью датчика, подключенного к смартфону. Более подробная информация на do-ra.ru',
+    descKey: 'examples__dora__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2011,
     customer: 'Интерсофт-Евразия',
   },
   {
-    name: 'АРМ организации поставщика транспортных услуг',
+    nameKey: 'examples__acceptant__name',
     imgPath: acceptantImg,
     urls: [
       'https://aza-acceptant.herokuapp.com/#/arm/accounting/stat-common-chart',
     ],
-    desc: 'Мордовия, пилотный проект системы обработки ЕСЭК (Единой Социальной Электронной Карты) для транспортных приложений.',
+    descKey: 'examples__acceptant__description',
     tags: [
       'angular.js',
       'javascript',
@@ -185,10 +185,10 @@ export const examples: ExampleData[] = [
     customer: 'Правительство Республики Мордовия',
   },
   {
-    name: 'Панель тревог',
+    nameKey: 'examples__alarm__name',
     imgPath: alarmImg,
     urls: [resumeUrl],
-    desc: 'Проект "Акустический мониторинг".',
+    descKey: 'examples__alarm__description',
     tags: [
       'angular.js',
       'javascript',
@@ -207,10 +207,10 @@ export const examples: ExampleData[] = [
       'Муниципалитеты городов Воронеж, Кострома, Архангельск, Калуга, Московский ЦОДД',
   },
   {
-    name: 'Detector UI',
+    nameKey: 'examples__detector__name',
     imgPath: detectorImg,
     urls: [resumeUrl],
-    desc: 'Проект "Акустический мониторинг". Административный интерфейс для управления настройками акустического детектора, аналогичный интерфейсу управления обычным WiFi-роутером. А также back-end.',
+    descKey: 'examples__detector__description',
     tags: [
       'angular.js',
       'javascript',
@@ -226,10 +226,10 @@ export const examples: ExampleData[] = [
       'Муниципалитеты городов Воронеж, Кострома, Архангельск, Калуга, Московский ЦОДД',
   },
   {
-    name: 'CO2',
+    nameKey: 'examples__co2__name',
     imgPath: co2Img,
     urls: [resumeUrl],
-    desc: 'Проект "Мониторинг содержания CO2 в воздухе офиса". Front-end and back-end (angular, node).',
+    descKey: 'examples__co2__description',
     tags: [
       'angular.js',
       'javascript',
@@ -244,30 +244,30 @@ export const examples: ExampleData[] = [
     customer: 'ИТЦ Система-Саров',
   },
   {
-    name: 'Безопасный Город',
+    nameKey: 'examples__safeCity__name',
     imgPath: safeCityImg,
     urls: [
       'https://www.microsoft.com/en-us/store/p/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%bc%d0%be%d0%bd%d0%b8%d1%82%d0%be%d1%80/9nblgggzjd45',
     ],
-    desc: 'Приложение "Мобильный Монитор" для Windows Phone. Измерение различных параметров состояния окружающей среды с помощью датчиков, подключенных к смартфону.',
+    descKey: 'examples__safeCity__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2012,
     customer: 'ИТЦ Система-Саров',
   },
   {
-    name: 'Система интернет-голосования Votum',
+    nameKey: 'examples__votum__name',
     imgPath: votumImg,
     urls: ['http://sarov-itc.ru/projects/51765498140ba0a1440000cd/'],
-    desc: 'Распределенная система дистанционного электронного голосования с использованием нескольких каналов передачи информации (WEB, SMS, e-mail) и архитектурой SOA (Service Oriented Architecture).',
+    descKey: 'examples__votum__description',
     tags: ['Django', 'Python', 'Django REST Framework'],
     year: 2011,
     customer: 'ЦИК РФ',
   },
   {
-    name: 'Веб-сервис для распознавания русской речи',
+    nameKey: 'examples__asr__name',
     imgPath: asrImg,
     urls: ['http://asr.sarov-itc.ru/'],
-    desc: 'ASR (Automatic Speech Recognition) HTTP. HTTP-интерфейс к распознавателю речи, который разрабатывался в «ИТЦ Система-Саров»',
+    descKey: 'examples__asr__description',
     tags: ['Django', 'Python'],
     year: 2011,
     customer: 'ИТЦ Система-Саров',

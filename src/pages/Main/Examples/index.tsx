@@ -55,7 +55,7 @@ const Examples: FC = () => {
         {/* right column - example cards */}
         <Box flex={2} className={classes.grid}>
           {examples.map(ex => (
-            <Example key={ex.name} data={ex} />
+            <Example key={ex.nameKey} data={ex} />
           ))}
         </Box>
       </Box>
