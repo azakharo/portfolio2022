@@ -8,6 +8,9 @@ import openPopUp from './PopUp';
 const useStyles = makeStyles(() => ({
   img: {
     width: '100%',
+    '&:hover': {
+      filter: 'brightness(85%)',
+    },
   },
 }));
 
