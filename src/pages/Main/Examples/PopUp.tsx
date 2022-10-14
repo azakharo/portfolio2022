@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.grey[300],
     },
   },
+  nowrap: {
+    whiteSpace: 'nowrap',
+  },
 }));
 
 interface Props extends InstanceProps<DefaultResolveFuncType> {
@@ -72,7 +75,13 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
             {/* demo links */}
             <Box display="flex" gridGap={10} mt={2}>
               {urls.map((url, urlInd) => (
-                <a target="_blank" href={url} rel="noreferrer" key={url}>
+                <a
+                  target="_blank"
+                  href={url}
+                  rel="noreferrer"
+                  key={url}
+                  className={classes.nowrap}
+                >
                   {t('examplePopUp__demoLabel')} {urlInd + 1}
                 </a>
               ))}
