@@ -32,6 +32,11 @@ const useStyles = makeStyles(theme => ({
       marginBottom: theme.spacing(2),
     },
   },
+  tag: {
+    '&:hover': {
+      backgroundColor: theme.palette.grey[300],
+    },
+  },
 }));
 
 interface Props extends InstanceProps<DefaultResolveFuncType> {
@@ -78,7 +83,7 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
         {/* tags */}
         <Box mb={2} className={classes.tagsContainer}>
           {tags.map(tag => (
-            <Chip key={tag} label={tag} />
+            <Chip key={tag} label={tag} className={classes.tag} />
           ))}
         </Box>
       </DialogContent>
