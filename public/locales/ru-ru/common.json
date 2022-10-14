@@ -6,9 +6,11 @@
   "autocomplete__noOptionsText": "Нет опций",
   "backToHomeButton__text": "Вернуться на главную",
   "buttonText__Cancel": "Отмена",
+  "customer": "заказчик",
   "defaultErrorMessage": "Что-то пошло не так",
   "errorMessage__pageNotFound": "Страница не найдена",
   "errorPage404__hint__wrongUrl": "Возможно, вы указали неверный URL",
+  "examplePopUp__demoLabel": "Демо",
   "example__subTitle": "Кликните на картинке для получения деталей",
   "examples__acceptant__description": "Мордовия, пилотный проект системы обработки ЕСЭК (Единой Социальной Электронной Карты) для транспортных приложений.",
   "examples__acceptant__name": "АРМ организации поставщика транспортных услуг",
@@ -51,5 +53,6 @@
   "specialization__miscCard__text": "Есть опыт в моделировании физических процессов. DevOps на Python. Разработка для Windows Phone, JavaME. Программировании микроконтроллеров Siemens...",
   "specialization__miscCard__title": "Разное",
   "specialization__subTitle": "Детали можно узнать в <a>моём резюме</a>",
-  "specialization__title": "Специализация"
+  "specialization__title": "Специализация",
+  "year": "год"
 }

@@ -6,9 +6,11 @@
   "autocomplete__noOptionsText": "No Options",
   "backToHomeButton__text": "Back to Home",
   "buttonText__Cancel": "Cancel",
+  "customer": "customer",
   "defaultErrorMessage": "Something went wrong",
   "errorMessage__pageNotFound": "Page Not Found",
   "errorPage404__hint__wrongUrl": "Probably you specified a wrong URL",
+  "examplePopUp__demoLabel": "Demo",
   "example__subTitle": "Click on the pictures to get additional information",
   "examples__acceptant__description": "Mordovia, a pilot project of ESEK system (Unified Social Card) for transport applications",
   "examples__acceptant__name": "Dashboard UI for the transport supplier",
@@ -51,5 +53,6 @@
   "specialization__miscCard__text": "Also had an experience in modelling physical processes. DevOps. Python. Development of Windows Phone, JavaME applications. Programming Siemens PLC, etc.",
   "specialization__miscCard__title": "Misc",
   "specialization__subTitle": "Details can be found in <a>my curriculum vitae</a>",
-  "specialization__title": "Specialization"
+  "specialization__title": "Specialization",
+  "year": "year"
 }
