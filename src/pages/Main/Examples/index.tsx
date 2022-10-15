@@ -40,7 +40,7 @@ const Examples: FC = () => {
         pr={6}
       >
         {/* left column */}
-        <Box flex={1} textAlign="center" py={2}>
+        <Box flex={1} textAlign="left" py={2} px={2}>
           {/* Title */}
           <Typography variant="h2" color="textPrimary">
             {t('examples__title')}

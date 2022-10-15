@@ -49,7 +49,7 @@ const Specialization: FC = () => {
         pl={2}
         pr={6}
       >
-        <Box flex={1} textAlign="center" py={2}>
+        <Box flex={1} textAlign="left" py={2} px={2}>
           <Typography variant="h2" color="textPrimary">
             {t('specialization__title')}
           </Typography>
