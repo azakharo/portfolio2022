@@ -75,15 +75,16 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
             {/* demo links */}
             <Box display="flex" gridGap={10} mt={2}>
               {urls.map((url, urlInd) => (
-                <a
-                  target="_blank"
-                  href={url}
-                  rel="noreferrer"
-                  key={url}
-                  className={classes.nowrap}
-                >
-                  {t('examplePopUp__demoLabel')} {urlInd + 1}
-                </a>
+                <Typography variant="subtitle1" key={url}>
+                  <a
+                    target="_blank"
+                    href={url}
+                    rel="noreferrer"
+                    className={classes.nowrap}
+                  >
+                    {t('examplePopUp__demoLabel')} {urlInd + 1}
+                  </a>
+                </Typography>
               ))}
             </Box>
           </Box>

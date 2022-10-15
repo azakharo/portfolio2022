@@ -39,7 +39,7 @@ const Contacts: FC = () => {
       {/* Location */}
       <Box>
         <Typography variant="h5">{t('contacts__location__label')}</Typography>
-        <Typography variant="body2">
+        <Typography variant="subtitle1">
           <a target="_blank" href={location} rel="noreferrer">
             {t('contacts__location__value')}
           </a>
@@ -49,7 +49,7 @@ const Contacts: FC = () => {
       {/* Phone */}
       <Box>
         <Typography variant="h5">{t('contacts__phone__label')}</Typography>
-        <Typography variant="body2">
+        <Typography variant="subtitle1">
           <a target="_blank" href={`tel:${phone}`} rel="noreferrer">
             {phone}
           </a>
@@ -59,7 +59,7 @@ const Contacts: FC = () => {
       {/* Email */}
       <Box>
         <Typography variant="h5">{t('contacts__email__label')}</Typography>
-        <Typography variant="body2">
+        <Typography variant="subtitle1">
           <a target="_blank" href={`mailto:${email}`} rel="noreferrer">
             {email}
           </a>
@@ -69,7 +69,7 @@ const Contacts: FC = () => {
       {/* Resume */}
       <Box>
         <Typography variant="h5">{t('contacts__resume__label')}</Typography>
-        <Typography variant="body2">
+        <Typography variant="subtitle1">
           <a target="_blank" href={resumeUrl} rel="noreferrer">
             hh.ru
           </a>
