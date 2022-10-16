@@ -10,12 +10,12 @@ import {
   Menu,
   Button,
   Box,
+  useScrollTrigger,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import classNames from 'classnames';
 
-import { COLOR__LIGHT_GREY } from 'src/theme';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import logo from 'src/assets/logo.png';
@@ -28,6 +28,7 @@ import {
   SECTION__SPECIALIZATION,
   SECTION__PICTURE,
 } from 'src/pages/Main/sectionIds';
+import { COLOR__LIGHT_GREY } from 'src/theme';
 
 interface UiSection {
   labelKey: string;
@@ -63,6 +64,16 @@ const uiSections: UiSection[] = [
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      backgroundColor: COLOR__LIGHT_GREY,
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+    },
+    rootTransparent: {
+      backgroundColor: 'transparent',
+    },
     grow: {
       flexGrow: 1,
     },
@@ -83,8 +94,12 @@ const useStyles = makeStyles((theme: Theme) =>
         display: 'none',
       },
     },
+    uiSectionButtons: {
+      color: 'white',
+    },
     activeUiSectionLink: {
-      backgroundColor: COLOR__LIGHT_GREY,
+      backgroundColor: 'transparent',
+      color: theme.palette.primary.main,
     },
   }),
 );
@@ -99,6 +114,10 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
   const upLg = useMediaQueryPatched((theme: Theme) =>
     theme.breakpoints.up('lg'),
   );
+  const scrolledDown = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  });
 
   // Collapsed menu for tablets and mobile
   const [mobileMenuAnchorEl, setMobileMenuAnchorEl] =
@@ -131,6 +150,7 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
         key={sectionId}
         onClick={() => handleSectionClick(sectionId)}
         className={classNames({
+          [classes.uiSectionButtons]: !scrolledDown,
           [classes.activeUiSectionLink]: index === activeSectionIndex,
         })}
       >
@@ -181,7 +201,11 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
   );
 
   const appBar = (
-    <AppBar position="sticky" color="inherit">
+    <AppBar
+      className={classNames(classes.root, {
+        [classes.rootTransparent]: !scrolledDown,
+      })}
+    >
       <Toolbar>
         {/* Logo */}
         <img src={logo} alt="logo" className={classes.logo} />
@@ -190,7 +214,11 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
         <div className={classes.grow} />
 
         <Box mx={4}>
-          <CurrentLanguageSelect />
+          <CurrentLanguageSelect
+            className={classNames({
+              [classes.uiSectionButtons]: !scrolledDown,
+            })}
+          />
         </Box>
 
         {/* Menu shown for desktop */}
