@@ -52,7 +52,7 @@
   "header__menuItem__Examples": "Примеры работ",
   "header__menuItem__Skills": "Навыки",
   "header__menuItem__Specialization": "Моя специализация",
-  "header__menuItem__Top": "В начало",
+  "header__menuItem__ToBeginning": "В начало",
   "loadingMessage": "Загрузка...",
   "noDataMessage": "Нет данных",
   "specialization__backendCard__text": "Разработка на Node.js и Express. Использую MongoDB и socket-ы. unit тестирование с помощью Mocha, Chai. Док-ция на Swagger. Docker для разворачивания Node.js приложений. Есть опыт разработки REST-сервисов на Python/Django/MySQL.",
