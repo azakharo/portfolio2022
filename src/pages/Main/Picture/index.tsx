@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 import portraitImage from 'src/assets/portrait.jpg';
+import { BannerLayer } from 'react-scroll-parallax/src/components/ParallaxBanner/types';
 
 const useStyles = makeStyles(() => ({
   imageContainer: {
@@ -27,19 +28,19 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const layers = [
+  {
+    image: portraitImage,
+    speed: -20,
+    scale: [1.2, 1],
+  },
+] as BannerLayer[];
+
 const Picture: FC = () => {
   const classes = useStyles();
 
   return (
-    <ParallaxBanner
-      layers={[
-        {
-          image: portraitImage,
-          speed: -20,
-          scale: [1.2, 1],
-        },
-      ]}
-    >
+    <ParallaxBanner layers={layers}>
       <div className={classes.imageContainer}>
         <div className={classes.text}>
           <h1>I am Alexey Zakharov</h1>

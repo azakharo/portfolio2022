@@ -116,7 +116,7 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
   );
   const scrolledDown = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 100,
+    threshold: 200,
   });
 
   // Collapsed menu for tablets and mobile
