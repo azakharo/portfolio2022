@@ -7,6 +7,8 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+    backgroundColor: theme.palette.primary.main,
+    color: 'white',
   },
 }));
 
@@ -33,7 +35,6 @@ const ScrollTop: FC<Props> = ({ topSectionId }) => {
   return (
     <Zoom in={trigger}>
       <Fab
-        color="primary"
         size="small"
         aria-label="scroll back to top"
         onClick={handleClick}
