@@ -1,54 +1,38 @@
 import React, { FC, memo } from 'react';
-import { makeStyles } from '@material-ui/core';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { Box, makeStyles } from '@material-ui/core';
 
 import portraitImage from 'src/assets/portrait.jpg';
-import { BannerLayer } from 'react-scroll-parallax/src/components/ParallaxBanner/types';
+import TechGrid from './TechGrid';
 
 const useStyles = makeStyles(() => ({
-  imageContainer: {
-    // Use "linear-gradient" to add darken background effect to the image. This will make the text easier to read
-    // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("${portraitImage}")`,
-    // Set a specific height
+  techGridContainer: {
+    background: 'linear-gradient(to bottom, black, rgba(255, 0, 0, 0))',
+  },
+  techGrid: {
+    width: '100%',
+    height: '100%',
+  },
+  portrait: {
     height: '50vh',
-
-    // Position and center the image to scale nicely on all screens
+    backgroundImage: `url("${portraitImage}")`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    position: 'relative',
-  },
-  text: {
-    textAlign: 'center',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    color: 'white',
   },
 }));
-
-const layers = [
-  {
-    image: portraitImage,
-    speed: -20,
-    scale: [1.2, 1],
-  },
-] as BannerLayer[];
 
 const Picture: FC = () => {
   const classes = useStyles();
 
   return (
-    <ParallaxBanner layers={layers}>
-      <div className={classes.imageContainer}>
-        <div className={classes.text}>
-          <h1>I am Alexey Zakharov</h1>
-          <p>And I am a Programmer</p>
-          <span>Hire me</span>
-        </div>
-      </div>
-    </ParallaxBanner>
+    <Box display="flex">
+      <Box flex={1} className={classes.techGridContainer}>
+        <TechGrid className={classes.techGrid} />
+      </Box>
+
+      {/* Portrait */}
+      <Box flex={1} className={classes.portrait} />
+    </Box>
   );
 };
 
