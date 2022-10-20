@@ -13,7 +13,7 @@ import {
   useScrollTrigger,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import MenuIcon from '@material-ui/icons/Menu';
 import classNames from 'classnames';
 
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
@@ -100,6 +100,9 @@ const useStyles = makeStyles((theme: Theme) =>
     activeUiSectionLink: {
       backgroundColor: 'transparent',
       color: theme.palette.primary.main,
+    },
+    mobileMenuButton: {
+      color: 'white',
     },
   }),
 );
@@ -235,9 +238,9 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
             aria-controls={mobileMenuId}
             aria-haspopup="true"
             onClick={handleMobileMenuOpen}
-            color="inherit"
+            className={classes.mobileMenuButton}
           >
-            <MoreIcon />
+            <MenuIcon />
           </IconButton>
         </div>
       </Toolbar>
