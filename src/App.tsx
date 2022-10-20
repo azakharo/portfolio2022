@@ -2,7 +2,6 @@ import React, { FC, memo, useEffect } from 'react';
 import { Router } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 import ModalContainer from 'react-modal-promise';
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Routes from 'src/routes/RoutesComponent';
 import history from 'src/utils/history';
@@ -41,15 +40,13 @@ const App: FC = () => {
   // Try to use the same order of the providers.
   return (
     <ThemeProvider theme={theme}>
-      <ParallaxProvider>
-        <Router history={history}>
-          <ErrorBoundary>
-            <GlobalStyles />
-            <Routes />
-            <ModalContainer />
-          </ErrorBoundary>
-        </Router>
-      </ParallaxProvider>
+      <Router history={history}>
+        <ErrorBoundary>
+          <GlobalStyles />
+          <Routes />
+          <ModalContainer />
+        </ErrorBoundary>
+      </Router>
     </ThemeProvider>
   );
 };

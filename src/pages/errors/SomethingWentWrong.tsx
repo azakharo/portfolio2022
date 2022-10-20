@@ -36,7 +36,7 @@ const FrontendError: FC = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [t] = useTranslation();
-  const mobileDevice = useMediaQueryPatched(theme.breakpoints.down('sm'));
+  const isMobileDevice = useMediaQueryPatched(theme.breakpoints.down('sm'));
 
   return (
     <>
@@ -47,7 +47,7 @@ const FrontendError: FC = () => {
       <Container maxWidth="lg" className={classes.root}>
         <Typography
           align="center"
-          variant={mobileDevice ? 'h4' : 'h1'}
+          variant={isMobileDevice ? 'h4' : 'h1'}
           color="textPrimary"
         >
           {t('defaultErrorMessage')}
