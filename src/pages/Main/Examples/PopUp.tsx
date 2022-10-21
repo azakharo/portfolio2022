@@ -18,9 +18,8 @@ import { useIsMobile } from 'src/hooks/responsive';
 
 const useStyles = makeStyles(theme => ({
   img: {
-    width: '50%',
+    width: '100%',
     borderRadius: 10,
-    marginRight: theme.spacing(4),
   },
   rightSide: {
     '& > p': {
@@ -50,7 +49,7 @@ interface Props extends InstanceProps<DefaultResolveFuncType> {
 const PopUp: FC<Props> = ({ data, onReject }) => {
   const [t] = useTranslation();
   const classes = useStyles();
-  const isMobileDevice = useIsMobile();
+  const isMobile = useIsMobile();
   const { nameKey, descKey, imgPath, year, customer, tags, urls } = data;
 
   const handleClose = useCallback(() => {
@@ -62,10 +61,12 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
       <DialogTitle title={t(nameKey)} onClose={handleClose} />
 
       <DialogContent>
-        <Box display={isMobileDevice ? 'block' : 'flex'} mb={4}>
-          <img src={imgPath} alt={t(nameKey)} className={classes.img} />
+        <Box display={isMobile ? 'block' : 'flex'} mb={4} gridGap={20}>
+          <Box flex={1}>
+            <img src={imgPath} alt={t(nameKey)} className={classes.img} />
+          </Box>
 
-          <Box className={classes.rightSide}>
+          <Box flex={1} className={classes.rightSide}>
             <Typography variant="body1">{t(descKey)}</Typography>
             <Typography variant="body1">
               <strong>{capitalize(t('year'))}:</strong> {year}
