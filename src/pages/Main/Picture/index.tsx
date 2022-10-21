@@ -2,7 +2,7 @@ import React, { FC, memo } from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 
 import portraitImage from 'src/assets/portrait.jpg';
-import { useIsMobile } from 'src/hooks/responsive';
+import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
 import TechGrid from './TechGrid';
 
 const useStyles = makeStyles(() => ({
@@ -24,11 +24,13 @@ const useStyles = makeStyles(() => ({
 
 const Picture: FC = () => {
   const classes = useStyles();
-  const isMobileDevice = useIsMobile();
+  const doShowTechGrid = useMediaQueryPatched(theme =>
+    theme.breakpoints.up('md'),
+  );
 
   return (
     <Box display="flex">
-      {!isMobileDevice && (
+      {doShowTechGrid && (
         <Box flex={1} className={classes.techGridContainer}>
           <TechGrid className={classes.techGrid} />
         </Box>

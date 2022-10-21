@@ -19,7 +19,6 @@ import classNames from 'classnames';
 import CurrentLanguageSelect from 'src/components/Selects/CurrentLanguage';
 import HideOnScrollDown from 'src/components/HideOnScrollDown';
 import logo from 'src/assets/logo.png';
-import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
 import {
   SECTION__ABOUT,
   SECTION__CONTACTS,
@@ -29,6 +28,7 @@ import {
   SECTION__PICTURE,
 } from 'src/pages/Main/sectionIds';
 import { COLOR__LIGHT_GREY } from 'src/theme';
+import { useIsDesktop } from 'src/hooks/responsive';
 
 interface UiSection {
   labelKey: string;
@@ -114,9 +114,7 @@ interface Props {
 const Header: FC<Props> = ({ activeSectionIndex }) => {
   const classes = useStyles();
   const [t] = useTranslation();
-  const upLg = useMediaQueryPatched((theme: Theme) =>
-    theme.breakpoints.up('lg'),
-  );
+  const isDesktop = useIsDesktop();
   const scrolledDown = useScrollTrigger({
     disableHysteresis: true,
     threshold: 200,
@@ -249,7 +247,7 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
 
   return (
     <>
-      {upLg ? appBar : <HideOnScrollDown>{appBar}</HideOnScrollDown>}
+      {isDesktop ? appBar : <HideOnScrollDown>{appBar}</HideOnScrollDown>}
       {renderMobileMenu}
     </>
   );
