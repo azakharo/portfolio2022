@@ -14,6 +14,7 @@ import { create, InstanceProps } from 'react-modal-promise';
 import { ExampleData } from 'src/pages/Main/Examples/config';
 import { DefaultResolveFuncType } from 'src/components/Dialogs/types';
 import DialogTitle from 'src/components/Dialogs/DialogTitle';
+import { useIsMobile } from 'src/hooks/responsive';
 
 const useStyles = makeStyles(theme => ({
   img: {
@@ -49,6 +50,7 @@ interface Props extends InstanceProps<DefaultResolveFuncType> {
 const PopUp: FC<Props> = ({ data, onReject }) => {
   const [t] = useTranslation();
   const classes = useStyles();
+  const isMobileDevice = useIsMobile();
   const { nameKey, descKey, imgPath, year, customer, tags, urls } = data;
 
   const handleClose = useCallback(() => {
@@ -60,7 +62,7 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
       <DialogTitle title={t(nameKey)} onClose={handleClose} />
 
       <DialogContent>
-        <Box display="flex" mb={4}>
+        <Box display={isMobileDevice ? 'block' : 'flex'} mb={4}>
           <img src={imgPath} alt={t(nameKey)} className={classes.img} />
 
           <Box className={classes.rightSide}>

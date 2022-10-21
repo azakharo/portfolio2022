@@ -5,14 +5,13 @@ import {
   Button,
   Container,
   Typography,
-  useTheme,
   makeStyles,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 
 import pageNotFoundImage from 'src/assets/pageNotFound.svg';
-import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
+import { useIsMobile } from 'src/hooks/responsive';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,9 +34,8 @@ const useStyles = makeStyles(theme => ({
 
 const NotFound: FC = () => {
   const classes = useStyles();
-  const theme = useTheme();
   const [t] = useTranslation();
-  const mobileDevice = useMediaQueryPatched(theme.breakpoints.down('sm'));
+  const mobileDevice = useIsMobile();
 
   return (
     <>

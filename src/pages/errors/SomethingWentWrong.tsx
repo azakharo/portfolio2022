@@ -5,14 +5,13 @@ import {
   Button,
   Container,
   Typography,
-  useTheme,
   makeStyles,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 
 import errorPageImg from 'src/assets/somethingWentWrong.png';
-import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
+import { useIsMobile } from 'src/hooks/responsive';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,9 +33,8 @@ const useStyles = makeStyles(theme => ({
 
 const FrontendError: FC = () => {
   const classes = useStyles();
-  const theme = useTheme();
   const [t] = useTranslation();
-  const isMobileDevice = useMediaQueryPatched(theme.breakpoints.down('sm'));
+  const isMobileDevice = useIsMobile();
 
   return (
     <>
