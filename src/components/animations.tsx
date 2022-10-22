@@ -2,6 +2,7 @@ import React, {
   CSSProperties,
   FC,
   PropsWithChildren,
+  ReactNode,
   RefObject,
   useEffect,
   useRef,
@@ -35,12 +36,13 @@ const AnimateIn: FC<
   PropsWithChildren<{
     from: CSSProperties;
     to: CSSProperties;
+    transition?: string;
   }>
-> = ({ from, to, children, ...restProps }) => {
+> = ({ from, to, children, transition = '600ms ease-in-out' }) => {
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useElementOnScreen(ref);
   const defaultStyles: CSSProperties = {
-    transition: '600ms ease-in-out',
+    transition,
   };
 
   return (
@@ -51,12 +53,10 @@ const AnimateIn: FC<
           ? {
               ...defaultStyles,
               ...to,
-              ...restProps,
             }
           : {
               ...defaultStyles,
               ...from,
-              ...restProps,
             }
       }
     >
@@ -65,33 +65,29 @@ const AnimateIn: FC<
   );
 };
 
-export const FadeIn: FC<PropsWithChildren<unknown>> = ({
-  children,
-  ...restProps
-}) => (
-  <AnimateIn from={{ opacity: 0 }} to={{ opacity: 1 }} {...restProps}>
+interface AnimationProps {
+  children: ReactNode;
+  transition?: string;
+}
+
+export const FadeIn: FC<AnimationProps> = ({ children, transition }) => (
+  <AnimateIn from={{ opacity: 0 }} to={{ opacity: 1 }} transition={transition}>
     {children}
   </AnimateIn>
 );
 
-export const FadeUp: FC<PropsWithChildren<unknown>> = ({
-  children,
-  ...restProps
-}) => (
+export const FadeUp: FC<AnimationProps> = ({ children, transition }) => (
   <AnimateIn
     from={{ opacity: 0, translate: '0 2rem' }}
     to={{ opacity: 1, translate: 'none' }}
-    {...restProps}
+    transition={transition}
   >
     {children}
   </AnimateIn>
 );
 
-export const ScaleIn: FC<PropsWithChildren<unknown>> = ({
-  children,
-  ...restProps
-}) => (
-  <AnimateIn from={{ scale: '0' }} to={{ scale: '1' }} {...restProps}>
+export const ScaleIn: FC<AnimationProps> = ({ children, transition }) => (
+  <AnimateIn from={{ scale: '0' }} to={{ scale: '1' }} transition={transition}>
     {children}
   </AnimateIn>
 );

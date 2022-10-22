@@ -11,6 +11,7 @@ import {
   SECTION__SKILLS,
   SECTION__SPECIALIZATION,
 } from 'src/pages/Main/sectionIds';
+import { FadeIn } from 'src/components/animations';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -62,7 +63,9 @@ const Main: FC = () => {
         <Examples />
       </section>
 
-      <Contacts />
+      <FadeIn transition="1000ms ease-in-out">
+        <Contacts />
+      </FadeIn>
 
       <ScrollTopButton topSectionId={SECTION__PICTURE} />
     </>
