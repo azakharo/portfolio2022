@@ -2,6 +2,7 @@ import React, { FC, memo, useCallback } from 'react';
 import { ButtonBase, makeStyles } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
+import { COLOR__DARK_GREY } from 'src/theme';
 import { ExampleData } from './config';
 import openPopUp from './PopUp';
 
@@ -11,6 +12,7 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       filter: 'brightness(85%)',
     },
+    border: `1px solid ${COLOR__DARK_GREY}`,
   },
 }));
 
