@@ -4,30 +4,41 @@ import { useTranslation } from 'react-i18next';
 
 import { SECTION__CONTACTS } from 'src/pages/Main/sectionIds';
 import { email, location, phone, resumeUrl } from 'src/config';
+import { getDesktopMediaQuery, useIsDesktop } from 'src/hooks/responsive';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: '#fafafa',
+
+    '& > div': {
+      marginRight: theme.spacing(10),
+      marginBottom: theme.spacing(4),
+
+      [getDesktopMediaQuery(theme)]: {
+        marginBottom: theme.spacing(0),
+      },
+    },
   },
 }));
 
 const Contacts: FC = () => {
   const [t] = useTranslation();
   const classes = useStyles();
+  const isDesktop = useIsDesktop();
 
   return (
     <Box
       id={SECTION__CONTACTS}
       className={classes.root}
       py={3}
+      px={4}
       display="flex"
-      justifyContent="center"
+      justifyContent={isDesktop ? 'center' : undefined}
       alignItems="center"
       flexWrap="wrap"
-      gridGap={50}
     >
       {/* Title */}
-      <Box mr={10}>
+      <Box>
         <Typography variant="h2">{t('contacts__title')}</Typography>
         <Box textAlign="right">
           <Typography variant="h5" color="textSecondary">
