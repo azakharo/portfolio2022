@@ -5,14 +5,14 @@ import { Box, Container, makeStyles, Typography } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
+import { getMobileMediaQuery, getTabletMediaQuery } from 'src/hooks/responsive';
 import { examples } from './config';
 import Example from './Example';
 
-const useStyles = makeStyles(() => ({
-  root: {},
+const useStyles = makeStyles(theme => ({
   grid: {
     display: 'grid',
-    gridGap: '10px',
+    gridGap: theme.spacing(2),
     gridTemplateColumns: 'repeat(3, 1fr)',
     alignItems: 'flex-start',
 
@@ -20,6 +20,15 @@ const useStyles = makeStyles(() => ({
       width: '100%',
       height: '100%',
       objectFit: 'cover',
+    },
+
+    [getMobileMediaQuery(theme)]: {
+      gridTemplateColumns: '1fr',
+      gridGap: theme.spacing(4),
+    },
+
+    [getTabletMediaQuery(theme)]: {
+      gridTemplateColumns: 'repeat(2, 1fr)',
     },
   },
 }));
