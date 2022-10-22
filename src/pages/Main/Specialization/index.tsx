@@ -5,7 +5,7 @@ import { FaNodeJs, FaReact, FaUniversity } from 'react-icons/fa';
 
 import { resumeUrl } from 'src/config';
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
-import { FadeIn, FadeUp, ScaleIn } from 'src/components/animations';
+import { ScaleIn } from 'src/components/animations';
 import Card from './Card';
 
 const iconSize = '2rem';
@@ -14,20 +14,23 @@ const specializations = [
     title: 'Frontend',
     icon: <FaReact color="#5dd3f3" size={iconSize} />,
     textKey: 'specialization__frontendCard__text',
-    Animation: FadeIn,
+    Animation: ScaleIn,
+    transition: '1000ms ease-in-out',
   },
   {
     title: 'Backend',
     icon: <FaNodeJs color="green" size={iconSize} />,
     textKey: 'specialization__backendCard__text',
     backgroundColor: '#f0f5ff',
-    Animation: FadeUp,
+    Animation: ScaleIn,
+    transition: '1000ms ease-in-out 500ms',
   },
   {
     titleKey: 'specialization__miscCard__title',
     icon: <FaUniversity color="purple" size={iconSize} />,
     textKey: 'specialization__miscCard__text',
     Animation: ScaleIn,
+    transition: '1000ms ease-in-out 1s',
   },
 ];
 
@@ -78,8 +81,9 @@ const Specialization: FC = () => {
               textKey,
               backgroundColor,
               Animation,
+              transition,
             }) => (
-              <Animation key={title || titleKey}>
+              <Animation key={title || titleKey} transition={transition}>
                 <Card
                   title={title}
                   titleKey={titleKey}
