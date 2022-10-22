@@ -28,7 +28,7 @@ const specializations = [
 ];
 
 const useStyles = makeStyles(theme => ({
-  flexContainer: {
+  rootContainer: {
     backgroundColor: theme.palette.grey[100],
   },
 }));
@@ -39,12 +39,11 @@ const Specialization: FC = () => {
   const isSingleColumn = useIsSingleColumnMode();
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" className={classes.rootContainer}>
       <Box
         display={isSingleColumn ? undefined : 'flex'}
         p={4}
         gridGap={40}
-        className={classes.flexContainer}
         py={6}
         pl={2}
         pr={6}
@@ -59,12 +58,7 @@ const Specialization: FC = () => {
               components={{
                 a: (
                   // eslint-disable-next-line jsx-a11y/anchor-has-content,jsx-a11y/control-has-associated-label
-                  <a
-                    target="_blank"
-                    href={resumeUrl}
-                    rel="noreferrer"
-                    // className={classes.termsAndConditionsLink}
-                  />
+                  <a target="_blank" href={resumeUrl} rel="noreferrer" />
                 ),
               }}
             />
