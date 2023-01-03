@@ -29,6 +29,9 @@ export const examples: ExampleData[] = [
     nameKey: 'examples__novakid__name',
     imgPath: novakidImg,
     urls: [
+      'https://disk.yandex.ru/i/g0Fu95W_t0AVBQ',
+      'https://disk.yandex.ru/i/sFZqrYFxQpBp8w',
+      'https://disk.yandex.ru/i/q5uKbilJmSRxcQ',
       'https://disk.yandex.ru/i/ALLvxAb3ivADwg',
       'https://disk.yandex.ru/i/GILAmZIT-oASHw',
       'https://disk.yandex.ru/i/TE_Cel2rAHaABQ',
