@@ -7,6 +7,7 @@ import ScrollTopButton from 'src/components/Buttons/ScrollTop';
 import {
   SECTION__ABOUT,
   SECTION__EXAMPLES,
+  SECTION__FUTURE_PLANS,
   SECTION__PICTURE,
   SECTION__SKILLS,
   SECTION__SPECIALIZATION,
@@ -18,10 +19,12 @@ import About from './About';
 import Skills from './Skills';
 import Specialization from './Specialization';
 import Examples from './Examples';
+import FuturePlans from './FuturePlans';
 import Contacts from './Contacts';
 
 const Main: FC = () => {
   const sectionRefs = [
+    useRef(null),
     useRef(null),
     useRef(null),
     useRef(null),
@@ -49,8 +52,8 @@ const Main: FC = () => {
         <About />
       </section>
 
-      <section ref={sectionRefs[2]} id={SECTION__SKILLS}>
-        <Skills />
+      <section ref={sectionRefs[2]} id={SECTION__EXAMPLES}>
+        <Examples />
       </section>
 
       <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
@@ -59,8 +62,12 @@ const Main: FC = () => {
         </Box>
       </section>
 
-      <section ref={sectionRefs[4]} id={SECTION__EXAMPLES}>
-        <Examples />
+      <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
+        <Skills />
+      </section>
+
+      <section ref={sectionRefs[5]} id={SECTION__FUTURE_PLANS}>
+        <FuturePlans />
       </section>
 
       <FadeIn transition="1000ms ease-in-out">

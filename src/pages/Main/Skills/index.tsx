@@ -1,5 +1,5 @@
 import React, { FC, memo } from 'react';
-import { Box, Container } from '@material-ui/core';
+import { Box, Container, Typography } from '@material-ui/core';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -16,19 +16,19 @@ import {
   SiWebpack,
 } from 'react-icons/si';
 import { RiLayoutMasonryLine } from 'react-icons/ri';
+import { useTranslation } from 'react-i18next';
 
-import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import Progress from './Progress';
 
 const skills = [
   {
     name: 'HTML',
-    value: 85,
+    value: 80,
     icon: <FaHtml5 color="orange" />,
   },
   {
     name: 'CSS, PostCSS, preprocessors',
-    value: 80,
+    value: 85,
     icon: <FaCss3Alt color="blue" />,
   },
   {
@@ -38,7 +38,7 @@ const skills = [
   },
   {
     name: 'Typescript',
-    value: 70,
+    value: 80,
     icon: <SiTypescript />,
   },
   {
@@ -64,7 +64,7 @@ const skills = [
   },
   {
     name: 'Testing: unit, integration, E2E',
-    value: 80,
+    value: 75,
     icon: <SiJest color="#94404d" />,
   },
   {
@@ -80,22 +80,31 @@ const skills = [
 ];
 
 const Skills: FC = () => {
-  const isSingleColumn = useIsSingleColumnMode();
+  const [t] = useTranslation();
 
   return (
-    // This component repeats the layout of the About comp.
-    <Container maxWidth="lg">
-      <Box display="flex" p={4} gridGap={40}>
-        {!isSingleColumn && <Box flex={1} />}
-        <Box flex={2}>
+    <>
+      <Container maxWidth="md">
+        <Box textAlign="center" my={2}>
+          <Typography variant="h3" color="textPrimary">
+            {t('skills__title')}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            {t('skills__subTitle')}
+          </Typography>
+        </Box>
+      </Container>
+
+      <Container maxWidth="sm">
+        <Box p={4}>
           {skills.map(({ name, value, icon }) => (
             <Box key={name} mb={2}>
               <Progress label={name} value={value} icon={icon} />
             </Box>
           ))}
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </>
   );
 };
 export default memo(Skills);

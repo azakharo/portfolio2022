@@ -9,7 +9,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lintAndFix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
-    "i18n-scanner": "npx i18next-scanner --config i18next-scanner.config.js 'src/**/*.{ts,tsx,js,jsx}'"
+    "i18n": "npx i18next-scanner --config i18next-scanner.config.js 'src/**/*.{ts,tsx,js,jsx}'"
   },
   "dependencies": {
     "@material-ui/core": "4.12.3",

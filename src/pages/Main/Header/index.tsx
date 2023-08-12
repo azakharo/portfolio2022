@@ -26,6 +26,7 @@ import {
   SECTION__SKILLS,
   SECTION__SPECIALIZATION,
   SECTION__PICTURE,
+  SECTION__FUTURE_PLANS,
 } from 'src/pages/Main/sectionIds';
 import { COLOR__LIGHT_GREY } from 'src/theme';
 import { useIsDesktop } from 'src/hooks/responsive';
@@ -45,16 +46,20 @@ const uiSections: UiSection[] = [
     sectionId: SECTION__ABOUT,
   },
   {
-    labelKey: 'header__menuItem__Skills',
-    sectionId: SECTION__SKILLS,
+    labelKey: 'header__menuItem__Examples',
+    sectionId: SECTION__EXAMPLES,
   },
   {
     labelKey: 'header__menuItem__Specialization',
     sectionId: SECTION__SPECIALIZATION,
   },
   {
-    labelKey: 'header__menuItem__Examples',
-    sectionId: SECTION__EXAMPLES,
+    labelKey: 'header__menuItem__Skills',
+    sectionId: SECTION__SKILLS,
+  },
+  {
+    labelKey: 'header__menuItem__FuturePlans',
+    sectionId: SECTION__FUTURE_PLANS,
   },
   {
     labelKey: 'header__menuItem__Contacts',
@@ -103,6 +108,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mobileMenuButton: {
       color: 'white',
+    },
+    mobileMenuButtonBlack: {
+      color: 'black',
     },
   }),
 );
@@ -236,7 +244,9 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
             aria-controls={mobileMenuId}
             aria-haspopup="true"
             onClick={handleMobileMenuOpen}
-            className={classes.mobileMenuButton}
+            className={classNames(classes.mobileMenuButton, {
+              [classes.mobileMenuButtonBlack]: scrolledDown,
+            })}
           >
             <MenuIcon />
           </IconButton>
