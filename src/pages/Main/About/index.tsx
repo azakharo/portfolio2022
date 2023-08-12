@@ -12,7 +12,7 @@ const About: FC = () => {
     <Container maxWidth="lg">
       <Box display={isSingleColumn ? undefined : 'flex'} p={4} gridGap={40}>
         {/* Left part */}
-        <Box flex={2}>
+        <Box flex={1}>
           {/* =============================================================== */}
           {/* About myself */}
           <Box textAlign="center" my={2}>
@@ -36,11 +36,16 @@ const About: FC = () => {
         </Box>
 
         {/* Right part */}
-        <Box flex={3}>
+        <Box flex={2}>
           {/* WORKAROUND issue with text-wrap: balance */}
-          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-          {/* @ts-ignore */}
-          <Box textAlign="center" my={2} sx={{ textWrap: 'balance' }}>
+          <Box
+            textAlign="center"
+            mt={isSingleColumn ? 6 : 2}
+            mb={2}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            sx={{ textWrap: 'balance' }}
+          >
             <Typography variant="h2" color="textPrimary">
               {t('about__whatIhaveLearned__title')}
             </Typography>
