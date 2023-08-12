@@ -109,6 +109,9 @@ const useStyles = makeStyles((theme: Theme) =>
     mobileMenuButton: {
       color: 'white',
     },
+    mobileMenuButtonBlack: {
+      color: 'black',
+    },
   }),
 );
 
@@ -241,7 +244,9 @@ const Header: FC<Props> = ({ activeSectionIndex }) => {
             aria-controls={mobileMenuId}
             aria-haspopup="true"
             onClick={handleMobileMenuOpen}
-            className={classes.mobileMenuButton}
+            className={classNames(classes.mobileMenuButton, {
+              [classes.mobileMenuButtonBlack]: scrolledDown,
+            })}
           >
             <MenuIcon />
           </IconButton>
