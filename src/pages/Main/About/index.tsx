@@ -64,5 +64,5 @@ export default memo(About);
 // </Box>
 //
 // <Typography variant="body1" color="textPrimary">
-//   {t('about__whatIwantToLearn__text', 'ha-ha text2')}
+//   {t('about__whatIwantToLearn__text')}
 // </Typography>
