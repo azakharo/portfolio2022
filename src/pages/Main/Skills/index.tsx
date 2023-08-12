@@ -83,25 +83,28 @@ const Skills: FC = () => {
   const [t] = useTranslation();
 
   return (
-    // This component repeats the layout of the About comp.
-    <Container maxWidth="sm">
-      <Box textAlign="center" my={2}>
-        <Typography variant="h3" color="textPrimary">
-          {t('skills__title')}
-        </Typography>
-        <Typography variant="subtitle1" color="textSecondary">
-          {t('skills__subTitle')}
-        </Typography>
-      </Box>
+    <>
+      <Container maxWidth="md">
+        <Box textAlign="center" my={2}>
+          <Typography variant="h3" color="textPrimary">
+            {t('skills__title')}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            {t('skills__subTitle')}
+          </Typography>
+        </Box>
+      </Container>
 
-      <Box p={4}>
-        {skills.map(({ name, value, icon }) => (
-          <Box key={name} mb={2}>
-            <Progress label={name} value={value} icon={icon} />
-          </Box>
-        ))}
-      </Box>
-    </Container>
+      <Container maxWidth="sm">
+        <Box p={4}>
+          {skills.map(({ name, value, icon }) => (
+            <Box key={name} mb={2}>
+              <Progress label={name} value={value} icon={icon} />
+            </Box>
+          ))}
+        </Box>
+      </Container>
+    </>
   );
 };
 export default memo(Skills);
