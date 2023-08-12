@@ -49,8 +49,8 @@ const Main: FC = () => {
         <About />
       </section>
 
-      <section ref={sectionRefs[2]} id={SECTION__SKILLS}>
-        <Skills />
+      <section ref={sectionRefs[2]} id={SECTION__EXAMPLES}>
+        <Examples />
       </section>
 
       <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
@@ -59,8 +59,8 @@ const Main: FC = () => {
         </Box>
       </section>
 
-      <section ref={sectionRefs[4]} id={SECTION__EXAMPLES}>
-        <Examples />
+      <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
+        <Skills />
       </section>
 
       <FadeIn transition="1000ms ease-in-out">

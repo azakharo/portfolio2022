@@ -45,16 +45,16 @@ const uiSections: UiSection[] = [
     sectionId: SECTION__ABOUT,
   },
   {
-    labelKey: 'header__menuItem__Skills',
-    sectionId: SECTION__SKILLS,
+    labelKey: 'header__menuItem__Examples',
+    sectionId: SECTION__EXAMPLES,
   },
   {
     labelKey: 'header__menuItem__Specialization',
     sectionId: SECTION__SPECIALIZATION,
   },
   {
-    labelKey: 'header__menuItem__Examples',
-    sectionId: SECTION__EXAMPLES,
+    labelKey: 'header__menuItem__Skills',
+    sectionId: SECTION__SKILLS,
   },
   {
     labelKey: 'header__menuItem__Contacts',
