@@ -76,7 +76,7 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
             </Typography>
 
             {/* demo links */}
-            <Box display="flex" gridGap={10} mt={2}>
+            <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
               {urls.map((url, urlInd) => (
                 <Typography variant="subtitle1" key={url}>
                   <a
