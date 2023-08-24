@@ -61,13 +61,3 @@ const About: FC = () => {
 };
 
 export default memo(About);
-
-// <Box textAlign="center" my={2}>
-//   <Typography variant="h4" color="textPrimary">
-//     {t('about__whatIwantToLearn__title')}
-//   </Typography>
-// </Box>
-//
-// <Typography variant="body1" color="textPrimary">
-//   {t('about__whatIwantToLearn__text')}
-// </Typography>
