@@ -8,7 +8,6 @@ import {
   SECTION__ABOUT,
   SECTION__EXAMPLES,
   SECTION__FUTURE_PLANS,
-  SECTION__MY_FRONTEND_HISTORY,
   SECTION__PICTURE,
   SECTION__SKILLS,
   SECTION__SPECIALIZATION,
@@ -68,11 +67,11 @@ const Main: FC = () => {
         <Examples />
       </section>
 
-      <section ref={sectionRefs[5]} id={SECTION__MY_FRONTEND_HISTORY}>
+      <section ref={sectionRefs[5]} id={SECTION__FUTURE_PLANS}>
         <MyFrontendHistory />
       </section>
 
-      <section ref={sectionRefs[5]} id={SECTION__FUTURE_PLANS}>
+      <section>
         <FuturePlans />
       </section>
 
