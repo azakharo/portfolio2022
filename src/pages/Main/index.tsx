@@ -13,6 +13,7 @@ import {
   SECTION__SPECIALIZATION,
 } from 'src/pages/Main/sectionIds';
 import { FadeIn } from 'src/components/animations';
+import MyFrontendHistory from 'src/pages/Main/MyFrontendHistory';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -52,8 +53,8 @@ const Main: FC = () => {
         <About />
       </section>
 
-      <section ref={sectionRefs[2]} id={SECTION__EXAMPLES}>
-        <Examples />
+      <section ref={sectionRefs[2]} id={SECTION__SKILLS}>
+        <Skills />
       </section>
 
       <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
@@ -62,11 +63,15 @@ const Main: FC = () => {
         </Box>
       </section>
 
-      <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
-        <Skills />
+      <section ref={sectionRefs[4]} id={SECTION__EXAMPLES}>
+        <Examples />
       </section>
 
       <section ref={sectionRefs[5]} id={SECTION__FUTURE_PLANS}>
+        <MyFrontendHistory />
+      </section>
+
+      <section>
         <FuturePlans />
       </section>
 
