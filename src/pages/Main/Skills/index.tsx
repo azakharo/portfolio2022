@@ -18,6 +18,7 @@ import {
 import { RiLayoutMasonryLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 
+import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import Progress from './Progress';
 
 const skills = [
@@ -81,30 +82,30 @@ const skills = [
 
 const Skills: FC = () => {
   const [t] = useTranslation();
+  const isSingleColumn = useIsSingleColumnMode();
 
   return (
-    <>
-      <Container maxWidth="md">
-        <Box textAlign="center" my={2}>
-          <Typography variant="h3" color="textPrimary">
-            {t('skills__title')}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            {t('skills__subTitle')}
-          </Typography>
-        </Box>
-      </Container>
+    <Container maxWidth="lg">
+      <Box display={isSingleColumn ? undefined : 'flex'} p={4} gridGap={40}>
+        {/* Left part */}
+        <Box flex={1} />
 
-      <Container maxWidth="sm">
-        <Box p={4}>
+        {/* Right part */}
+        <Box flex={2}>
+          <Box mb={2}>
+            <Typography variant="subtitle1" color="textSecondary">
+              {t('skills__subTitle')}
+            </Typography>
+          </Box>
+
           {skills.map(({ name, value, icon }) => (
             <Box key={name} mb={2}>
               <Progress label={name} value={value} icon={icon} />
             </Box>
           ))}
         </Box>
-      </Container>
-    </>
+      </Box>
+    </Container>
   );
 };
 export default memo(Skills);

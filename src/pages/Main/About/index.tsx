@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
 import { Box, Container, Typography } from '@material-ui/core';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 
