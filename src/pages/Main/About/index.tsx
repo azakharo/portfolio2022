@@ -37,11 +37,11 @@ const About: FC = () => {
 
         {/* Right part */}
         <Box flex={2}>
-          {/* WORKAROUND issue with text-wrap: balance */}
           <Box
             textAlign="center"
             mt={isSingleColumn ? 6 : 2}
             mb={2}
+            // WORKAROUND issue with text-wrap: balance
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             sx={{ textWrap: 'balance' }}
