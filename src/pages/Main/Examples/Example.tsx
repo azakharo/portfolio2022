@@ -3,6 +3,7 @@ import { ButtonBase, makeStyles } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 import { COLOR__DARK_GREY } from 'src/theme';
+import { useAnalytics } from 'src/hooks/useAnalytics';
 import { ExampleData } from './config';
 import openPopUp from './PopUp';
 
@@ -23,14 +24,21 @@ interface Props {
 const Example: FC<Props> = ({ data }) => {
   const [t] = useTranslation();
   const classes = useStyles();
+  const { sendEvent: sendAnalyticEvent } = useAnalytics();
   const { imgPath, nameKey } = data;
 
   const handleClick = useCallback(() => {
+    sendAnalyticEvent({
+      category: 'MyProjects',
+      action: 'clicked',
+      label: nameKey,
+    });
+
     // open popup with additional info
     openPopUp({ data }).catch(() => {
       // on cancel do nothing
     });
-  }, [data]);
+  }, [data, nameKey, sendAnalyticEvent]);
 
   return (
     <ButtonBase onClick={handleClick}>
