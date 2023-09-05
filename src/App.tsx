@@ -6,6 +6,7 @@ import ModalContainer from 'react-modal-promise';
 import Routes from 'src/routes/RoutesComponent';
 import history from 'src/utils/history';
 import GlobalStyles from 'src/components/GlobalStyles';
+import { useAnalytics } from 'src/hooks/useAnalytics';
 import ErrorBoundary from './ErrorBoundary';
 import { createAppTheme } from './theme';
 import useSettings from './hooks/useSettings';
@@ -13,6 +14,7 @@ import './font.css';
 
 const App: FC = () => {
   const { settings } = useSettings();
+  const { init: initAnalytics } = useAnalytics();
 
   const theme = createAppTheme({
     direction: settings.direction,
@@ -29,6 +31,8 @@ const App: FC = () => {
       // eslint-disable-next-line no-console
       console.log(`version: ${appVersion as string}`);
     }
+
+    initAnalytics();
 
     // really need to run it once on startup
     // eslint-disable-next-line react-hooks/exhaustive-deps
