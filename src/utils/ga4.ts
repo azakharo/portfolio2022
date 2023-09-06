@@ -22,8 +22,7 @@ export interface SendEventParams {
 }
 
 export const sendEvent = ({ action, category, label }: SendEventParams): void =>
-  ga4.event({
-    action,
+  ga4.event(action, {
     category,
     label,
   });

@@ -25,20 +25,20 @@ const Example: FC<Props> = ({ data }) => {
   const [t] = useTranslation();
   const classes = useStyles();
   const { sendEvent: sendAnalyticEvent } = useAnalytics();
-  const { imgPath, nameKey } = data;
+  const { id, imgPath, nameKey } = data;
 
   const handleClick = useCallback(() => {
     sendAnalyticEvent({
       category: 'MyProjects',
-      action: 'clicked',
-      label: nameKey,
+      action: `${id} clicked`,
+      label: id,
     });
 
     // open popup with additional info
     openPopUp({ data }).catch(() => {
       // on cancel do nothing
     });
-  }, [data, nameKey, sendAnalyticEvent]);
+  }, [data, id, sendAnalyticEvent]);
 
   return (
     <ButtonBase onClick={handleClick}>

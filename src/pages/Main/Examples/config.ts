@@ -15,6 +15,7 @@ import votumImg from 'src/assets/examples/votum.png';
 import asrImg from 'src/assets/examples/asr.png';
 
 export interface ExampleData {
+  id: string;
   nameKey: string;
   imgPath: string;
   urls: string[];
@@ -26,6 +27,7 @@ export interface ExampleData {
 
 export const examples: ExampleData[] = [
   {
+    id: 'novakid',
     nameKey: 'examples__novakid__name',
     imgPath: novakidImg,
     urls: [
@@ -57,6 +59,7 @@ export const examples: ExampleData[] = [
     customer: 'NovaKid',
   },
   {
+    id: 'cloudike',
     nameKey: 'examples__cloudike__name',
     imgPath: cloudikeImg,
     urls: [
@@ -86,6 +89,7 @@ export const examples: ExampleData[] = [
     customer: 'ASD Technologies',
   },
   {
+    id: 'croc',
     nameKey: 'examples__croc__name',
     imgPath: crocImg,
     urls: [
@@ -115,6 +119,7 @@ export const examples: ExampleData[] = [
     customer: 'КРОК',
   },
   {
+    id: 'mentor',
     nameKey: 'examples__mentor__name',
     imgPath: mentorImg,
     urls: ['https://mentor-pi.vercel.app/'],
@@ -124,6 +129,7 @@ export const examples: ExampleData[] = [
     customer: 'ИТЦ Система-Саров',
   },
   {
+    id: 'mordovia',
     nameKey: 'examples__mordovia__name',
     imgPath: mordoviaImg,
     urls: ['https://dashboard-page2.herokuapp.com'],
@@ -141,6 +147,7 @@ export const examples: ExampleData[] = [
     customer: 'Правительство Республики Мордовия',
   },
   {
+    id: 'uptime-monitor',
     nameKey: 'examples__uptime__name',
     imgPath: uptimeImg,
     urls: ['https://aza-uptime.herokuapp.com'],
@@ -158,6 +165,7 @@ export const examples: ExampleData[] = [
     customer: 'Правительство Республики Мордовия',
   },
   {
+    id: 'dora',
     nameKey: 'examples__dora__name',
     imgPath: doraImg,
     urls: [
@@ -169,6 +177,7 @@ export const examples: ExampleData[] = [
     customer: 'Интерсофт-Евразия',
   },
   {
+    id: 'acceptant',
     nameKey: 'examples__acceptant__name',
     imgPath: acceptantImg,
     urls: [
@@ -188,6 +197,7 @@ export const examples: ExampleData[] = [
     customer: 'Правительство Республики Мордовия',
   },
   {
+    id: 'alarm-panel',
     nameKey: 'examples__alarm__name',
     imgPath: alarmImg,
     urls: [resumeUrl],
@@ -210,6 +220,7 @@ export const examples: ExampleData[] = [
       'Муниципалитеты городов Воронеж, Кострома, Архангельск, Калуга, Московский ЦОДД',
   },
   {
+    id: 'acoustic-detector',
     nameKey: 'examples__detector__name',
     imgPath: detectorImg,
     urls: [resumeUrl],
@@ -229,6 +240,7 @@ export const examples: ExampleData[] = [
       'Муниципалитеты городов Воронеж, Кострома, Архангельск, Калуга, Московский ЦОДД',
   },
   {
+    id: 'co2',
     nameKey: 'examples__co2__name',
     imgPath: co2Img,
     urls: [resumeUrl],
@@ -247,6 +259,7 @@ export const examples: ExampleData[] = [
     customer: 'ИТЦ Система-Саров',
   },
   {
+    id: 'safe-city',
     nameKey: 'examples__safeCity__name',
     imgPath: safeCityImg,
     urls: [
@@ -258,6 +271,7 @@ export const examples: ExampleData[] = [
     customer: 'ИТЦ Система-Саров',
   },
   {
+    id: 'votum',
     nameKey: 'examples__votum__name',
     imgPath: votumImg,
     urls: ['http://sarov-itc.ru/projects/51765498140ba0a1440000cd/'],
@@ -267,6 +281,7 @@ export const examples: ExampleData[] = [
     customer: 'ЦИК РФ',
   },
   {
+    id: 'asr',
     nameKey: 'examples__asr__name',
     imgPath: asrImg,
     urls: ['http://asr.sarov-itc.ru/'],
