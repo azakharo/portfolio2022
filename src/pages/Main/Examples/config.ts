@@ -3,14 +3,14 @@ import novakidImg from 'src/assets/examples/novakid.jpg';
 import cloudikeImg from 'src/assets/examples/cloudike-admin-ui-users.png';
 import crocImg from 'src/assets/examples/c2-ui-demo.png';
 import mentorImg from 'src/assets/examples/mentor.png';
-import mordoviaImg from 'src/assets/examples/dashboard.png';
+import mordoviaImg from 'src/assets/examples/dashboard.jpg';
 import uptimeImg from 'src/assets/examples/uptime.png';
-import doraImg from 'src/assets/examples/dora.png';
-import acceptantImg from 'src/assets/examples/acceptant1.png';
+import doraImg from 'src/assets/examples/dora.jpg';
+import acceptantImg from 'src/assets/examples/acceptant1.jpg';
 import alarmImg from 'src/assets/examples/alarm-panel.png';
 import detectorImg from 'src/assets/examples/detector_ui.png';
 import co2Img from 'src/assets/examples/co2.png';
-import safeCityImg from 'src/assets/examples/safeCity.png';
+import safeCityImg from 'src/assets/examples/safeCity.jpg';
 import votumImg from 'src/assets/examples/votum.png';
 import asrImg from 'src/assets/examples/asr.png';
 
