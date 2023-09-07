@@ -1,8 +1,9 @@
 // eslint-disable-next-line eslint-comments/disable-enable-pair
 /* eslint-disable jsx-a11y/alt-text */
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useEffect, useRef, useState } from 'react';
 import { Box, Container, makeStyles, Typography } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
+import useInViewport from 'ahooks/lib/useInViewport';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import { getMobileMediaQuery, getTabletMediaQuery } from 'src/hooks/responsive';
@@ -38,8 +39,18 @@ const Examples: FC = () => {
   const [t] = useTranslation();
   const isSingleColumn = useIsSingleColumnMode();
 
+  const containerRef = useRef(null);
+  const [isVisible] = useInViewport(containerRef);
+  const [wasVisible, setWasVisible] = useState(false);
+
+  useEffect(() => {
+    if (!wasVisible && isVisible) {
+      setWasVisible(true);
+    }
+  }, [isVisible, wasVisible]);
+
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" ref={containerRef}>
       <Box
         display={isSingleColumn ? undefined : 'flex'}
         p={4}
@@ -63,9 +74,8 @@ const Examples: FC = () => {
 
         {/* right column - example cards */}
         <Box flex={2} className={classes.grid}>
-          {examples.map(ex => (
-            <Example key={ex.nameKey} data={ex} />
-          ))}
+          {wasVisible &&
+            examples.map(ex => <Example key={ex.nameKey} data={ex} />)}
         </Box>
       </Box>
     </Container>
