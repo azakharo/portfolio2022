@@ -1,7 +1,6 @@
 import React, { FC, memo } from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 
-import portraitImage from 'src/assets/portrait.jpg';
 import useMediaQueryPatched from 'src/hooks/useMediaQueryPatched';
 import TechGrid from './TechGrid';
 
@@ -15,7 +14,7 @@ const useStyles = makeStyles(() => ({
   },
   portrait: {
     height: '50vh',
-    backgroundImage: `url("${portraitImage}")`,
+    backgroundImage: `url("${process.env.PUBLIC_URL}/portrait.jpg")`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
