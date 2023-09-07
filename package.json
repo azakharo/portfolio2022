@@ -5,7 +5,7 @@
   "homepage": "/",
   "scripts": {
     "start": "craco --openssl-legacy-provider start",
-    "build": "craco build",
+    "build": "craco --openssl-legacy-provider build",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lintAndFix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
@@ -76,7 +76,7 @@
     ]
   },
   "engines": {
-    "npm": "7.20.3",
-    "node": "16.6.1"
+    "npm": ">=8.19.2 <9.0.0",
+    "node": ">=18.12.1 <19.0.0"
   }
 }
