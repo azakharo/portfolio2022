@@ -69,7 +69,7 @@
   "noDataMessage": "No Data",
   "picture__IAM": "My name is Alexey",
   "picture__IamProgrammer": "And I am a programmer",
-  "skills__subTitle": "Below I tried to estimate my current level of the knowledge",
+  "skills__subTitle": "Here I tried to estimate my current level of the knowledge",
   "skills__title": "Knowledge of technologies and tools",
   "specialization__backendCard__text": "Development on Node.js and Express. I use MongoDB and sockets. unittesting using Mocha, Chai. Create Swagger documentation. Use Docker for deployment. Also can develop REST APIs on Python/Django/MySQL.",
   "specialization__frontendCard__text": "Development on React.js/Redux. Responsive UIs via Flexbox and CSS Grid. Manual build configuration. Different types of testing of UI applications.",

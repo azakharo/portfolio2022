@@ -28,12 +28,12 @@ const skills = [
     icon: <FaHtml5 color="orange" />,
   },
   {
-    name: 'CSS, PostCSS, preprocessors',
+    name: 'CSS, PostCSS, SASS',
     value: 85,
     icon: <FaCss3Alt color="blue" />,
   },
   {
-    name: 'Javascript, including latest features',
+    name: 'Javascript',
     value: 90,
     icon: <FaJsSquare />,
   },
@@ -48,12 +48,12 @@ const skills = [
     icon: <FaReact color="#5dd3f3" />,
   },
   {
-    name: 'Redux, redux-thunk, redux-saga',
+    name: 'Redux, redux-thunk, redux-saga, zustand',
     value: 80,
     icon: <SiRedux color="#7248b6" />,
   },
   {
-    name: 'Build tools: Webpack, Babel, ESLint, etc.',
+    name: 'Build tools: Webpack, Babel, ESLint, Prettier, Vite',
     value: 85,
     icon: (
       <>
@@ -88,16 +88,15 @@ const Skills: FC = () => {
     <Container maxWidth="lg">
       <Box display={isSingleColumn ? undefined : 'flex'} p={4} gridGap={40}>
         {/* Left part */}
-        <Box flex={1} />
+        <Box flex={1} textAlign="left" py={2} px={2}>
+          {/* Title */}
+          <Typography variant="h5" color="textSecondary">
+            {t('skills__subTitle')}
+          </Typography>
+        </Box>
 
         {/* Right part */}
         <Box flex={2}>
-          <Box mb={2}>
-            <Typography variant="subtitle1" color="textSecondary">
-              {t('skills__subTitle')}
-            </Typography>
-          </Box>
-
           {skills.map(({ name, value, icon }) => (
             <Box key={name} mb={2}>
               <Progress label={name} value={value} icon={icon} />
