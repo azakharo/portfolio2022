@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
 import { Box, Container, Typography } from '@material-ui/core';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 
@@ -30,7 +30,7 @@ const About: FC = () => {
           </Typography>
           <br />
           <Typography variant="body1" color="textPrimary">
-            {t('about__myInterests')}
+            <Trans i18nKey="about__myInterests" />
           </Typography>
         </Box>
       </Box>
