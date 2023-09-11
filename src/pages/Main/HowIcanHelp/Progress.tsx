@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   },
   bar: {
     borderRadius: 3,
-    backgroundColor: '#1a90ff',
+    backgroundColor: 'violet',
   },
 }));
 
@@ -47,7 +47,7 @@ const Progress: FC<Props> = ({ label, value, icon }) => {
     <div ref={containerRef}>
       <Box mb={1} display="flex" justifyContent="space-between">
         <Box display="flex">
-          {icon && <div style={{ fontSize: 20 }}>{icon}&nbsp;</div>}
+          {icon && <div style={{ fontSize: 22 }}>{icon}&nbsp;</div>}
           <span>{label}</span>
         </Box>
       </Box>
