@@ -14,14 +14,15 @@ import {
 } from 'src/pages/Main/sectionIds';
 import { FadeIn } from 'src/components/animations';
 import MyFrontendHistory from 'src/pages/Main/MyFrontendHistory';
+import Skills from 'src/pages/Main/Skills';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
-import Skills from './Skills';
 import Specialization from './Specialization';
 import Examples from './Examples';
 import FuturePlans from './FuturePlans';
 import Contacts from './Contacts';
+import HowIcanHelp from './HowIcanHelp';
 
 const Main: FC = () => {
   const sectionRefs = [
@@ -51,27 +52,25 @@ const Main: FC = () => {
 
       <section ref={sectionRefs[1]} id={SECTION__ABOUT}>
         <About />
+        <HowIcanHelp />
       </section>
 
-      <section ref={sectionRefs[2]} id={SECTION__SKILLS}>
-        <Skills />
-      </section>
-
-      <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
+      <section ref={sectionRefs[2]} id={SECTION__SPECIALIZATION}>
         <Box mt={4} mb={10}>
           <Specialization />
         </Box>
       </section>
 
-      <section ref={sectionRefs[4]} id={SECTION__EXAMPLES}>
+      <section ref={sectionRefs[3]} id={SECTION__EXAMPLES}>
         <Examples />
       </section>
 
-      <section ref={sectionRefs[5]} id={SECTION__FUTURE_PLANS}>
+      <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
         <MyFrontendHistory />
+        <Skills />
       </section>
 
-      <section>
+      <section ref={sectionRefs[5]} id={SECTION__FUTURE_PLANS}>
         <FuturePlans />
       </section>
 
