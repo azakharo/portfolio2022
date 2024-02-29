@@ -8,7 +8,7 @@ import {
   Typography,
   Chip,
 } from '@material-ui/core';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { create, InstanceProps } from 'react-modal-promise';
 
 import { ExampleData } from 'src/pages/Main/Examples/config';
@@ -67,7 +67,9 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
           </Box>
 
           <Box flex={1} className={classes.rightSide}>
-            <Typography variant="body1">{t(descKey)}</Typography>
+            <Typography variant="body1">
+              <Trans i18nKey={descKey} />
+            </Typography>
             <Typography variant="body1">
               <strong>{capitalize(t('year'))}:</strong> {year}
             </Typography>

@@ -39,6 +39,8 @@
   "examples__detector__name": "Detector UI",
   "examples__dora__description": "Mobile application for Windows Phone. Mobile application for JavaME. Measuring radiation by sensor connected to smartphone. For more information please visit: do-ra.ru",
   "examples__dora__name": "DO-RA, mobile dosimeter-radiometer",
+  "examples__iz__description": "I support iz.ru and ren.tv sites. Also I developed 2 new frontend apps for SUZ project (Ticket Management System).<br />Using SUZ our customers can inform us about interesting info events and attach photo and video files.<br />SUZ operators examine the received messages. The most interesting messages are collected and processed by filming a report or writing a note or article/статьи.<br />The 1st frontend app is a public part. Our customers use it to send messages to us. It's Next.js app. We used Material UI v5 for building UI.<br />2nd frontend is an admin interface for processing messages from customers. It's SPA written on React.js and Material UI v5.",
+  "examples__iz__name": "IZ, RenTV, SUZ",
   "examples__mentor__description": "React.js frontend, Redux, RxJS. Listening recorded phone calls and examining analytics results, wave-forms, timelines.",
   "examples__mentor__name": "Speech Analytics web service",
   "examples__mordovia__description": "Mordovia, a pilot project of ESEK system (Unified Social Card) for transport applications",

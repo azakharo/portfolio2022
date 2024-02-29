@@ -13,6 +13,10 @@ import co2Img from 'src/assets/examples/co2.png';
 import safeCityImg from 'src/assets/examples/safeCity.jpg';
 import votumImg from 'src/assets/examples/votum.png';
 import asrImg from 'src/assets/examples/asr.png';
+import imgIz from 'src/assets/examples/iz/iz.png';
+import imgRen from 'src/assets/examples/iz/ren.png';
+import imgFos from 'src/assets/examples/iz/fos.png';
+import imgSuzAdminka from 'src/assets/examples/iz/suz-adminka.png';
 
 export interface ExampleData {
   id: string;
@@ -26,6 +30,29 @@ export interface ExampleData {
 }
 
 export const examples: ExampleData[] = [
+  {
+    id: 'iz',
+    nameKey: 'examples__iz__name',
+    imgPath: imgIz,
+    urls: [imgRen, imgIz, imgFos, imgSuzAdminka],
+    descKey: 'examples__iz__description',
+    tags: [
+      'React.js',
+      'Next.js',
+      'material-ui',
+      'react-query',
+      'Typescript',
+      'react-hook-form',
+      'react-drop-zone',
+      'vite',
+      'axios',
+      'eslint',
+      'prettier',
+      'date-fns',
+    ],
+    year: 2023,
+    customer: 'iz.ru',
+  },
   {
     id: 'novakid',
     nameKey: 'examples__novakid__name',
