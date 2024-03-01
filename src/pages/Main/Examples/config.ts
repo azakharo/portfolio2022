@@ -41,6 +41,7 @@ export const examples: ExampleData[] = [
       'Next.js',
       'material-ui',
       'react-query',
+      'Web Sockets',
       'Typescript',
       'react-hook-form',
       'react-drop-zone',
