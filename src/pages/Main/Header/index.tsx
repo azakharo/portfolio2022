@@ -26,7 +26,6 @@ import {
   SECTION__SKILLS,
   SECTION__SPECIALIZATION,
   SECTION__PICTURE,
-  SECTION__FUTURE_PLANS,
 } from 'src/pages/Main/sectionIds';
 import { COLOR__LIGHT_GREY } from 'src/theme';
 import { useIsDesktop } from 'src/hooks/responsive';
@@ -57,10 +56,10 @@ const uiSections: UiSection[] = [
     labelKey: 'header__menuItem__Skills',
     sectionId: SECTION__SKILLS,
   },
-  {
-    labelKey: 'header__menuItem__FuturePlans',
-    sectionId: SECTION__FUTURE_PLANS,
-  },
+  // {
+  //   labelKey: 'header__menuItem__FuturePlans',
+  //   sectionId: SECTION__FUTURE_PLANS,
+  // },
   {
     labelKey: 'header__menuItem__Contacts',
     sectionId: SECTION__CONTACTS,
