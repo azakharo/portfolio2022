@@ -13,10 +13,10 @@ import co2Img from 'src/assets/examples/co2.png';
 import safeCityImg from 'src/assets/examples/safeCity.jpg';
 import votumImg from 'src/assets/examples/votum.png';
 import asrImg from 'src/assets/examples/asr.png';
-import imgIz from 'src/assets/examples/iz/iz.png';
-import imgRen from 'src/assets/examples/iz/ren.png';
-import imgFos from 'src/assets/examples/iz/fos.png';
-import imgSuzAdminka from 'src/assets/examples/iz/suz-adminka.png';
+import imgIz from 'src/assets/examples/iz/iz.jpg';
+import imgRen from 'src/assets/examples/iz/ren.jpg';
+import imgFos from 'src/assets/examples/iz/fos.jpg';
+import imgSuzAdminka from 'src/assets/examples/iz/suz-adminka.jpg';
 import imgBkMain from 'src/assets/examples/ren-bk-landing/main.jpg';
 import imgBkGallery from 'src/assets/examples/ren-bk-landing/gallery.jpg';
 
