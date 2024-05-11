@@ -74,7 +74,7 @@
   "skills__subTitle": "Here I tried to estimate my current level of the knowledge",
   "skills__title": "Knowledge of technologies and tools",
   "specialization__backendCard__text": "Development on Node.js and Express. I use MongoDB and sockets. unittesting using Mocha, Chai. Create Swagger documentation. Use Docker for deployment. Also can develop REST APIs on Python/Django/MySQL.",
-  "specialization__frontendCard__text": "Development on React.js/Redux. Responsive UIs via Flexbox and CSS Grid. Manual build configuration. Different types of testing of UI applications.",
+  "specialization__frontendCard__text": "Development on React.js. Injection of React components into non-react sites. Own UI library development. Responsive UIs via Flexbox and CSS Grid. Manual build configuration. Different types of testing of UI applications.",
   "specialization__miscCard__text": "Also had an experience in modelling physical processes. DevOps. Python. Development of Windows Phone, JavaME applications. Programming Siemens PLC, etc.",
   "specialization__miscCard__title": "Misc",
   "specialization__subTitle": "Details can be found in <a>my curriculum vitae</a>",

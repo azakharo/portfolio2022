@@ -74,7 +74,7 @@
   "skills__subTitle": "Здесь я попытался примерно оценить \"полноту\" своих знаний",
   "skills__title": "Знание технологий и инструментов",
   "specialization__backendCard__text": "Разработка на Node.js и Express. Использую MongoDB и socket-ы. unit тестирование с помощью Mocha, Chai. Док-ция на Swagger. Docker для разворачивания Node.js приложений. Есть опыт разработки REST-сервисов на Python/Django/MySQL.",
-  "specialization__frontendCard__text": "Разработка на React.js/Redux. Адаптивная вёрстка с помощью Flexbox и CSS Grid. Самостоятельная настройка сборки проекта. Разные виды тестирования.",
+  "specialization__frontendCard__text": "Разработка на React.js. Внедрение React компонентов на НЕреактовские сайты. Разработка библиотек компонентов. Адаптивная вёрстка с помощью Flexbox и CSS Grid. Самостоятельная настройка сборки проекта. Разные виды тестирования.",
   "specialization__miscCard__text": "Есть опыт в моделировании физических процессов. DevOps на Python. Разработка для Windows Phone, JavaME. Программировании микроконтроллеров Siemens...",
   "specialization__miscCard__title": "Разное",
   "specialization__subTitle": "Детали можно узнать в <a>моём резюме</a>",
