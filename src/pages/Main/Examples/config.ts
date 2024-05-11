@@ -17,6 +17,8 @@ import imgIz from 'src/assets/examples/iz/iz.png';
 import imgRen from 'src/assets/examples/iz/ren.png';
 import imgFos from 'src/assets/examples/iz/fos.png';
 import imgSuzAdminka from 'src/assets/examples/iz/suz-adminka.png';
+import imgBkMain from 'src/assets/examples/ren-bk-landing/main.jpg';
+import imgBkGallery from 'src/assets/examples/ren-bk-landing/gallery.jpg';
 
 export interface ExampleData {
   id: string;
@@ -30,6 +32,28 @@ export interface ExampleData {
 }
 
 export const examples: ExampleData[] = [
+  {
+    id: 'bk',
+    nameKey: 'examples__bk__name',
+    imgPath: imgBkMain,
+    urls: [
+      'https://bk.ren.tv/',
+      'https://ren.tv/project/boitsovskii-klub',
+      imgBkGallery,
+      imgBkMain,
+    ],
+    descKey: 'examples__bk__description',
+    tags: [
+      'Next.js',
+      'React.js',
+      'material-ui',
+      'Typescript',
+      'eslint',
+      'prettier',
+    ],
+    year: 2024,
+    customer: 'RenTV',
+  },
   {
     id: 'iz',
     nameKey: 'examples__iz__name',

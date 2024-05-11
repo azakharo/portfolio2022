@@ -29,6 +29,8 @@
   "examples__alarm__name": "Панель тревог",
   "examples__asr__description": "ASR (Automatic Speech Recognition) HTTP. HTTP-интерфейс к распознавателю речи, который разрабатывался в «ИТЦ Система-Саров»",
   "examples__asr__name": "Веб-сервис для распознавания русской речи",
+  "examples__bk__description": "Новый лэндинг для проекта бойцовского клуба с уникальным запоминающимся дизайном",
+  "examples__bk__name": "Бойцовский клуб РЕН ТВ",
   "examples__cloudike__description": "Frontend на React.js. Material UI. Интерфейс для управления бэкендом Cloudike. Что такое Cloudike? - cloudike.com",
   "examples__cloudike__name": "Новая админка Cloudike",
   "examples__co2__description": "Проект \"Мониторинг содержания CO2 в воздухе офиса\". Front-end and back-end (angular, node).",

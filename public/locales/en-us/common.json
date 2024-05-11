@@ -29,6 +29,8 @@
   "examples__alarm__name": "Alarm panel",
   "examples__asr__description": "ASR (Automatic Speech Recognition) system developed by «ITC Sistem-Sarov»",
   "examples__asr__name": "Web interface for speech recognition system made for Russian language",
+  "examples__bk__description": "A new landing page with unique and remarkable design",
+  "examples__bk__name": "Fight Club on Ren TV channel",
   "examples__cloudike__description": "React.js frontend, Material UI. The web interface for configuring Cloudike backend. For more information about Cloudike go to cloudike.com",
   "examples__cloudike__name": "New admin UI for Cloudike",
   "examples__co2__description": "Project \"Monitoring of CO2 in the air in office\". Frontend and backend (angular, node).",
