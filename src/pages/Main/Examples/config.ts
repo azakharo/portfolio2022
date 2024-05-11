@@ -1,4 +1,3 @@
-import { resumeUrl } from 'src/config';
 import novakidImg from 'src/assets/examples/novakid.jpg';
 import cloudikeImg from 'src/assets/examples/cloudike-admin-ui-users.png';
 import crocImg from 'src/assets/examples/c2-ui-demo.png';
@@ -184,7 +183,7 @@ export const examples: ExampleData[] = [
     id: 'mordovia',
     nameKey: 'examples__mordovia__name',
     imgPath: mordoviaImg,
-    urls: ['https://dashboard-page2.herokuapp.com'],
+    urls: [],
     descKey: 'examples__mordovia__description',
     tags: [
       'angular.js',
@@ -202,7 +201,7 @@ export const examples: ExampleData[] = [
     id: 'uptime-monitor',
     nameKey: 'examples__uptime__name',
     imgPath: uptimeImg,
-    urls: ['https://aza-uptime.herokuapp.com'],
+    urls: [],
     descKey: 'examples__novakid__description',
     tags: [
       'angular.js',
@@ -220,9 +219,7 @@ export const examples: ExampleData[] = [
     id: 'dora',
     nameKey: 'examples__dora__name',
     imgPath: doraImg,
-    urls: [
-      'http://www.windowsphone.com/ru-ru/store/app/do-ra/237e80e8-e719-4fcf-a824-db7db15c129f',
-    ],
+    urls: ['https://do-ra.ru'],
     descKey: 'examples__dora__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2011,
@@ -232,9 +229,7 @@ export const examples: ExampleData[] = [
     id: 'acceptant',
     nameKey: 'examples__acceptant__name',
     imgPath: acceptantImg,
-    urls: [
-      'https://aza-acceptant.herokuapp.com/#/arm/accounting/stat-common-chart',
-    ],
+    urls: [''],
     descKey: 'examples__acceptant__description',
     tags: [
       'angular.js',
@@ -252,7 +247,7 @@ export const examples: ExampleData[] = [
     id: 'alarm-panel',
     nameKey: 'examples__alarm__name',
     imgPath: alarmImg,
-    urls: [resumeUrl],
+    urls: [],
     descKey: 'examples__alarm__description',
     tags: [
       'angular.js',
@@ -275,7 +270,7 @@ export const examples: ExampleData[] = [
     id: 'acoustic-detector',
     nameKey: 'examples__detector__name',
     imgPath: detectorImg,
-    urls: [resumeUrl],
+    urls: [],
     descKey: 'examples__detector__description',
     tags: [
       'angular.js',
@@ -295,7 +290,7 @@ export const examples: ExampleData[] = [
     id: 'co2',
     nameKey: 'examples__co2__name',
     imgPath: co2Img,
-    urls: [resumeUrl],
+    urls: [],
     descKey: 'examples__co2__description',
     tags: [
       'angular.js',
@@ -314,9 +309,7 @@ export const examples: ExampleData[] = [
     id: 'safe-city',
     nameKey: 'examples__safeCity__name',
     imgPath: safeCityImg,
-    urls: [
-      'https://www.microsoft.com/en-us/store/p/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%bc%d0%be%d0%bd%d0%b8%d1%82%d0%be%d1%80/9nblgggzjd45',
-    ],
+    urls: [],
     descKey: 'examples__safeCity__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2012,
@@ -326,7 +319,7 @@ export const examples: ExampleData[] = [
     id: 'votum',
     nameKey: 'examples__votum__name',
     imgPath: votumImg,
-    urls: ['http://sarov-itc.ru/projects/51765498140ba0a1440000cd/'],
+    urls: [],
     descKey: 'examples__votum__description',
     tags: ['Django', 'Python', 'Django REST Framework'],
     year: 2011,
@@ -336,7 +329,7 @@ export const examples: ExampleData[] = [
     id: 'asr',
     nameKey: 'examples__asr__name',
     imgPath: asrImg,
-    urls: ['http://asr.sarov-itc.ru/'],
+    urls: [],
     descKey: 'examples__asr__description',
     tags: ['Django', 'Python'],
     year: 2011,
