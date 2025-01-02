@@ -18,6 +18,7 @@ import imgFos from 'src/assets/examples/iz/fos.jpg';
 import imgSuzAdminka from 'src/assets/examples/iz/suz-adminka.jpg';
 import imgBkMain from 'src/assets/examples/ren-bk-landing/main.jpg';
 import imgBkGallery from 'src/assets/examples/ren-bk-landing/gallery.jpg';
+import imgVirtman from 'src/assets/examples/virtman/gnivc.jpg';
 
 export interface ExampleData {
   id: string;
@@ -31,6 +32,30 @@ export interface ExampleData {
 }
 
 export const examples: ExampleData[] = [
+  {
+    id: 'virtman',
+    nameKey: 'examples__virtman__name',
+    imgPath: imgVirtman,
+    urls: ['https://gnivc.ru/software/', 'https://gnivc.ru/on_gnivts/'],
+    descKey: 'examples__virtman__description',
+    tags: [
+      'React.js',
+      'Ant Design',
+      'react-query',
+      'Typescript',
+      'Vite',
+      'vitest',
+      'web-sockets',
+      'react-hook-form',
+      'yup',
+      'date-fns',
+      'eslint',
+      'prettier',
+      'storybook',
+    ],
+    year: 2024,
+    customer: 'gnivc.ru',
+  },
   {
     id: 'bk',
     nameKey: 'examples__bk__name',
