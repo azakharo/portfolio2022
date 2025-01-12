@@ -9,7 +9,7 @@ import React, {
   useState,
 } from 'react';
 
-function useElementOnScreen(ref: RefObject<Element>, rootMargin = '0px') {
+function useIsElementOnScreen(ref: RefObject<Element>, rootMargin = '0px') {
   const [isIntersecting, setIsIntersecting] = useState(true);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,7 +40,7 @@ const AnimateIn: FC<
   }>
 > = ({ from, to, children, transition = '600ms ease-in-out' }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const onScreen = useElementOnScreen(ref);
+  const isOnScreen = useIsElementOnScreen(ref);
   const defaultStyles: CSSProperties = {
     transition,
   };
@@ -49,7 +49,7 @@ const AnimateIn: FC<
     <div
       ref={ref}
       style={
-        onScreen
+        isOnScreen
           ? {
               ...defaultStyles,
               ...to,
