@@ -81,7 +81,7 @@ const TechGrid: FC<Props> = ({ className }) => {
           <Typography variant="h4" className={classes.myNameIs}>
             {t('picture__IAM')}
           </Typography>
-          <Typography variant="button" className={classes.iAmProgrammer}>
+          <Typography variant="button" className={classes.iAmProgrammer} noWrap>
             {t('picture__IamProgrammer')}
           </Typography>
         </div>
