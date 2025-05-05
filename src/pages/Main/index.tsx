@@ -53,14 +53,14 @@ const Main: FC = () => {
         <HowIcanHelp />
       </section>
 
-      <section ref={sectionRefs[2]} id={SECTION__SPECIALIZATION}>
+      <section ref={sectionRefs[2]} id={SECTION__EXAMPLES}>
+        <Examples />
+      </section>
+
+      <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
         <Box mt={4} mb={10}>
           <Specialization />
         </Box>
-      </section>
-
-      <section ref={sectionRefs[3]} id={SECTION__EXAMPLES}>
-        <Examples />
       </section>
 
       <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
