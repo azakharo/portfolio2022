@@ -67,6 +67,16 @@ const Contacts: FC = () => {
         </Typography>
       </Box>
 
+      {/* Telegram */}
+      <Box>
+        <Typography variant="h5">Telegram</Typography>
+        <Typography variant="subtitle1">
+          <a target="_blank" href={`tel:${phone}`} rel="noreferrer">
+            @zangular
+          </a>
+        </Typography>
+      </Box>
+
       {/* Email */}
       <Box>
         <Typography variant="h5">{t('contacts__email__label')}</Typography>
