@@ -50,7 +50,8 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
   const [t] = useTranslation();
   const classes = useStyles();
   const isMobile = useIsMobile();
-  const { nameKey, descKey, imgPath, year, customer, tags, urls } = data;
+  const { nameKey, descKey, imgPath, year, customer, customerKey, tags, urls } =
+    data;
 
   const handleClose = useCallback(() => {
     onReject();
@@ -74,7 +75,8 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
               <strong>{capitalize(t('year'))}:</strong> {year}
             </Typography>
             <Typography variant="body1">
-              <strong>{capitalize(t('customer'))}:</strong> {customer}
+              <strong>{capitalize(t('customer'))}:</strong>{' '}
+              {customerKey ? t(customerKey) : customer || ''}
             </Typography>
 
             {/* demo links */}

@@ -19,6 +19,10 @@ import imgSuzAdminka from 'src/assets/examples/iz/suz-adminka.jpg';
 import imgBkMain from 'src/assets/examples/ren-bk-landing/main.jpg';
 import imgBkGallery from 'src/assets/examples/ren-bk-landing/gallery.jpg';
 import imgVirtman from 'src/assets/examples/virtman/gnivc.jpg';
+import imgLentaCat from 'src/assets/examples/lenta/cat.jpg';
+import imgLentaTasks from 'src/assets/examples/lenta/tasks.png';
+import imgLentaEmployees from 'src/assets/examples/lenta/employees.png';
+import imgLentaLogin from 'src/assets/examples/lenta/login.jpg';
 
 export interface ExampleData {
   id: string;
@@ -28,10 +32,35 @@ export interface ExampleData {
   descKey: string;
   tags: string[];
   year: number;
-  customer: string;
+  customer?: string;
+  customerKey?: string;
 }
 
 export const examples: ExampleData[] = [
+  {
+    id: 'lenta',
+    nameKey: 'examples__lenta__name',
+    imgPath: imgLentaCat,
+    urls: [imgLentaEmployees, imgLentaTasks, imgLentaLogin],
+    descKey: 'examples__lenta__description',
+    tags: [
+      'React.js',
+      'Typescript',
+      'MUI',
+      'storybook',
+      'react-query',
+      'vite',
+      'vitest',
+      'FSD',
+      'eslint',
+      'prettier',
+      'axios',
+      'date-fns',
+      'react-hook-form + yup',
+    ],
+    year: 2025,
+    customerKey: 'examples__lenta__customer',
+  },
   {
     id: 'novakid',
     nameKey: 'examples__novakid__name',
