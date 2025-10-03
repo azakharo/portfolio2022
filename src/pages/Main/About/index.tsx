@@ -3,6 +3,7 @@ import { Box, Container, Typography } from '@material-ui/core';
 import { useTranslation, Trans } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
+import SplitText from 'src/components/SplitText';
 
 const About: FC = () => {
   const [t] = useTranslation();
@@ -15,7 +16,18 @@ const About: FC = () => {
         <Box flex={1}>
           <Box textAlign="center" my={2}>
             <Typography variant="h2" color="textPrimary">
-              {t('about__title')}
+              <SplitText
+                text={t('about__title')}
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+              />
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
               {t('about__subTitle')}

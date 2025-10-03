@@ -7,3 +7,5 @@ node_modules
 src/datetime/convertLangCode2DateFnsLocale.js
 src/components/Autocomplete.js
 src/utils/lazyWithRetry.js
+
+src/components/SplitText.tsx
