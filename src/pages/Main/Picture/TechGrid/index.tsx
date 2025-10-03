@@ -13,7 +13,7 @@ import { RiLayoutMasonryLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 import Item from './Item';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
@@ -29,10 +29,10 @@ const useStyles = makeStyles(theme => ({
   },
   myNameIs: {
     fontSize: '1.7rem',
-    color: theme.palette.warning.main,
+    color: '#f8ebc9',
   },
   iAmProgrammer: {
-    color: theme.palette.warning.main,
+    color: '#f8ebc9',
   },
   rotateClockwise: {
     transform: 'rotate(7deg)',

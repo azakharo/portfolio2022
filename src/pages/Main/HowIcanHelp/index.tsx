@@ -14,32 +14,26 @@ import Progress from './Progress';
 const items = [
   {
     labelKey: 'howIcanHelp__headDevelopment',
-    value: 100,
     icon: <GiCaveman color="orange" />,
   },
   {
     labelKey: 'howIcanHelp__createInfra',
-    value: 100,
     icon: <FaReact color="#5dd3f3" />,
   },
   {
     labelKey: 'howIcanHelp__createArch',
-    value: 100,
     icon: <BiBuildingHouse />,
   },
   {
     labelKey: 'howIcanHelp__orgReview',
-    value: 100,
     icon: <SiCodereview color="violet" />,
   },
   {
     labelKey: 'howIcanHelp__introTesting',
-    value: 100,
     icon: <SiJest color="#94404d" />,
   },
   {
     labelKey: 'howIcanHelp__orgDeploy',
-    value: 100,
     icon: <FcProcess color="blue" />,
   },
 ];
@@ -62,9 +56,9 @@ const HowIcanHelp: FC = () => {
             </Typography>
           </Box>
 
-          {items.map(({ labelKey, value, icon }) => (
+          {items.map(({ labelKey, icon }) => (
             <Box key={labelKey} mb={2}>
-              <Progress label={t(labelKey)} value={value} icon={icon} />
+              <Progress label={t(labelKey)} icon={icon} />
             </Box>
           ))}
         </Box>

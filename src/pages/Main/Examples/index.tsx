@@ -7,6 +7,7 @@ import useInViewport from 'ahooks/lib/useInViewport';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import { getMobileMediaQuery, getTabletMediaQuery } from 'src/hooks/responsive';
+import { SplitTextPreconfigured } from 'src/components/SplitTextPreconfigured';
 import { examples } from './config';
 import Example from './Example';
 
@@ -63,7 +64,7 @@ const Examples: FC = () => {
         <Box flex={1} textAlign="left" py={2} px={2}>
           {/* Title */}
           <Typography variant="h2" color="textPrimary">
-            {t('examples__title')}
+            <SplitTextPreconfigured text={t('examples__title')} />
           </Typography>
 
           {/* Subtitle */}
