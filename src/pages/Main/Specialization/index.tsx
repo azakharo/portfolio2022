@@ -6,6 +6,7 @@ import { FaNodeJs, FaReact, FaUniversity } from 'react-icons/fa';
 import { resumeUrl } from 'src/config';
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import { ScaleIn } from 'src/components/animations';
+import { SplitTextPreconfigured } from 'src/components/SplitTextPreconfigured';
 import Card from './Card';
 
 const iconSize = '2rem';
@@ -57,7 +58,7 @@ const Specialization: FC = () => {
       >
         <Box flex={1} textAlign="left" py={2} px={2}>
           <Typography variant="h2" color="textPrimary">
-            {t('specialization__title')}
+            <SplitTextPreconfigured text={t('specialization__title')} />
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
             <Trans
