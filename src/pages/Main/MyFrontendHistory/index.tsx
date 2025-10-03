@@ -3,7 +3,6 @@ import { Box, Container, Typography } from '@material-ui/core';
 import { Trans, useTranslation } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
-import { SplitTextPreconfigured } from 'src/components/SplitTextPreconfigured';
 
 const MyFrontendHistory: FC = () => {
   const [t] = useTranslation();
@@ -21,9 +20,7 @@ const MyFrontendHistory: FC = () => {
       >
         <Box flex={1} textAlign="left" py={2} px={2}>
           <Typography variant="h3" color="textPrimary">
-            <SplitTextPreconfigured
-              text={t('about__whatIhaveLearned__title')}
-            />
+            {t('about__whatIhaveLearned__title')}
           </Typography>
         </Box>
 
