@@ -23,18 +23,7 @@ import imgLentaCat from 'src/assets/examples/lenta/cat.jpg';
 import imgLentaTasks from 'src/assets/examples/lenta/tasks.png';
 import imgLentaEmployees from 'src/assets/examples/lenta/employees.png';
 import imgLentaLogin from 'src/assets/examples/lenta/login.jpg';
-
-export interface ExampleData {
-  id: string;
-  nameKey: string;
-  imgPath: string;
-  urls: string[];
-  descKey: string;
-  tags: string[];
-  year: number;
-  customer?: string;
-  customerKey?: string;
-}
+import { ExampleData } from 'src/types/example';
 
 export const examples: ExampleData[] = [
   {
