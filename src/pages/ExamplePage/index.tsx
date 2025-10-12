@@ -1,14 +1,50 @@
 import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { Box, IconButton, Typography } from '@material-ui/core';
+import {
+  Box,
+  Chip,
+  IconButton,
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
 import { useParams, useHistory } from 'react-router-dom';
 import { examples } from 'src/pages/Main/Examples/config';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
+import capitalize from 'lodash/capitalize';
+import { useIsMobile } from 'src/hooks/responsive';
+
+const useStyles = makeStyles(theme => ({
+  img: {
+    width: '100%',
+    borderRadius: 10,
+  },
+  rightSide: {
+    '& > p': {
+      marginBottom: theme.spacing(1),
+    },
+  },
+  tagsContainer: {
+    '& > div': {
+      marginRight: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+    },
+  },
+  tag: {
+    '&:hover': {
+      backgroundColor: theme.palette.grey[300],
+    },
+  },
+  nowrap: {
+    whiteSpace: 'nowrap',
+  },
+}));
 
 export const ExamplePage: FC = () => {
   const [t] = useTranslation();
   const history = useHistory();
+  const isMobile = useIsMobile();
+  const classes = useStyles();
   const { id } = useParams<{ id: string }>();
   const example = examples.find(ex => ex.id === id);
 
@@ -16,7 +52,8 @@ export const ExamplePage: FC = () => {
     return null;
   }
 
-  const { nameKey } = example;
+  const { nameKey, descKey, imgPath, year, customer, customerKey, tags, urls } =
+    example;
 
   return (
     <>
@@ -41,6 +78,48 @@ export const ExamplePage: FC = () => {
         </IconButton>
 
         <Typography variant="h4">{t(nameKey)}</Typography>
+      </Box>
+
+      <Box display={isMobile ? 'block' : 'flex'} mb={4} gridGap={20}>
+        <Box flex={1}>
+          <img src={imgPath} alt={t(nameKey)} className={classes.img} />
+        </Box>
+
+        <Box flex={1} className={classes.rightSide}>
+          <Typography variant="body1">
+            <Trans i18nKey={descKey} />
+          </Typography>
+          <Typography variant="body1">
+            <strong>{capitalize(t('year'))}:</strong> {year}
+          </Typography>
+          <Typography variant="body1">
+            <strong>{capitalize(t('customer'))}:</strong>{' '}
+            {customerKey ? t(customerKey) : customer || ''}
+          </Typography>
+
+          {/* demo links */}
+          <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
+            {urls.map((url, urlInd) => (
+              <Typography variant="subtitle1" key={url}>
+                <a
+                  target="_blank"
+                  href={url}
+                  rel="noreferrer"
+                  className={classes.nowrap}
+                >
+                  {t('examplePopUp__demoLabel')} {urlInd + 1}
+                </a>
+              </Typography>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+
+      {/* tags */}
+      <Box mb={2} className={classes.tagsContainer}>
+        {tags.map(tag => (
+          <Chip key={tag} label={tag} className={classes.tag} />
+        ))}
       </Box>
     </>
   );
