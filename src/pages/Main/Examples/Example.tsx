@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { COLOR__DARK_GREY } from 'src/theme';
 import { useAnalytics } from 'src/hooks/useAnalytics';
-import { ExampleData } from './config';
+import { ExampleData } from 'src/types/example';
 import openPopUp from './PopUp';
 
 const useStyles = makeStyles(() => ({

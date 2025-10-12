@@ -11,10 +11,10 @@ import {
 import { Trans, useTranslation } from 'react-i18next';
 import { create, InstanceProps } from 'react-modal-promise';
 
-import { ExampleData } from 'src/pages/Main/Examples/config';
 import { DefaultResolveFuncType } from 'src/components/Dialogs/types';
 import DialogTitle from 'src/components/Dialogs/DialogTitle';
 import { useIsMobile } from 'src/hooks/responsive';
+import { ExampleData } from 'src/types/example';
 
 const useStyles = makeStyles(theme => ({
   img: {
