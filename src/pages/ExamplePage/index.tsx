@@ -13,6 +13,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import capitalize from 'lodash/capitalize';
 import { useIsMobile } from 'src/hooks/responsive';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const useStyles = makeStyles(theme => ({
   img: {
@@ -118,20 +119,24 @@ export const ExamplePage: FC = () => {
         </Box>
       </Box>
 
-      {/* demo links */}
-      <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
-        {urls.map((url, urlInd) => (
-          <Typography variant="subtitle1" key={url}>
-            <a
-              target="_blank"
-              href={url}
-              rel="noreferrer"
-              className={classes.nowrap}
-            >
-              {t('examplePopUp__demoLabel')} {urlInd + 1}
-            </a>
-          </Typography>
-        ))}
+      {/* demo image carousel */}
+      <Box p={4} bgcolor="#00000005">
+        <Splide aria-label="My Favorite Images">
+          {urls.map(url => (
+            <SplideSlide key={url}>
+              <Box display="flex" justifyContent="center">
+                <img
+                  src={url}
+                  alt=""
+                  style={{
+                    height: '45vh',
+                    width: 'auto',
+                  }}
+                />
+              </Box>
+            </SplideSlide>
+          ))}
+        </Splide>
       </Box>
     </>
   );
