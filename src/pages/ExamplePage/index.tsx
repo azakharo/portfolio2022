@@ -16,7 +16,6 @@ import { useIsMobile } from 'src/hooks/responsive';
 
 const useStyles = makeStyles(theme => ({
   img: {
-    width: '100%',
     borderRadius: 10,
   },
   rightSide: {
@@ -67,7 +66,7 @@ export const ExamplePage: FC = () => {
         alignItems="center"
         px={2}
         py={1}
-        bgcolor="#F6F6F6"
+        bgcolor="#00000013"
       >
         <IconButton
           onClick={() => {
@@ -80,10 +79,23 @@ export const ExamplePage: FC = () => {
         <Typography variant="h4">{t(nameKey)}</Typography>
       </Box>
 
-      <Box display={isMobile ? 'block' : 'flex'} mb={4} gridGap={20}>
-        <Box flex={1}>
-          <img src={imgPath} alt={t(nameKey)} className={classes.img} />
-        </Box>
+      <Box
+        display={isMobile ? 'block' : 'flex'}
+        mb={4}
+        gridGap={20}
+        px={4}
+        py={4}
+      >
+        <img
+          style={{
+            height: isMobile ? 'auto' : '30vh',
+            width: isMobile ? '100%' : 'auto',
+            marginBottom: isMobile ? '10px' : undefined,
+          }}
+          src={imgPath}
+          alt={t(nameKey)}
+          className={classes.img}
+        />
 
         <Box flex={1} className={classes.rightSide}>
           <Typography variant="body1">
@@ -97,28 +109,28 @@ export const ExamplePage: FC = () => {
             {customerKey ? t(customerKey) : customer || ''}
           </Typography>
 
-          {/* demo links */}
-          <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
-            {urls.map((url, urlInd) => (
-              <Typography variant="subtitle1" key={url}>
-                <a
-                  target="_blank"
-                  href={url}
-                  rel="noreferrer"
-                  className={classes.nowrap}
-                >
-                  {t('examplePopUp__demoLabel')} {urlInd + 1}
-                </a>
-              </Typography>
+          {/* tags */}
+          <Box mb={2} className={classes.tagsContainer}>
+            {tags.map(tag => (
+              <Chip key={tag} label={tag} className={classes.tag} />
             ))}
           </Box>
         </Box>
       </Box>
 
-      {/* tags */}
-      <Box mb={2} className={classes.tagsContainer}>
-        {tags.map(tag => (
-          <Chip key={tag} label={tag} className={classes.tag} />
+      {/* demo links */}
+      <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
+        {urls.map((url, urlInd) => (
+          <Typography variant="subtitle1" key={url}>
+            <a
+              target="_blank"
+              href={url}
+              rel="noreferrer"
+              className={classes.nowrap}
+            >
+              {t('examplePopUp__demoLabel')} {urlInd + 1}
+            </a>
+          </Typography>
         ))}
       </Box>
     </>
