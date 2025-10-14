@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   Box,
+  ButtonBase,
   Chip,
   IconButton,
   makeStyles,
@@ -14,6 +15,7 @@ import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import capitalize from 'lodash/capitalize';
 import { useIsMobile } from 'src/hooks/responsive';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { openInNewTab } from 'src/utils/browser';
 
 const useStyles = makeStyles(theme => ({
   img: {
@@ -119,14 +121,20 @@ export const ExamplePage: FC = () => {
           {urls.map(url => (
             <SplideSlide key={url}>
               <Box display="flex" justifyContent="center">
-                <img
-                  src={url}
-                  alt=""
-                  style={{
-                    height: '45vh',
-                    width: 'auto',
+                <ButtonBase
+                  onClick={() => {
+                    openInNewTab(url, true);
                   }}
-                />
+                >
+                  <img
+                    src={url}
+                    alt=""
+                    style={{
+                      height: '45vh',
+                      width: 'auto',
+                    }}
+                  />
+                </ButtonBase>
               </Box>
             </SplideSlide>
           ))}
