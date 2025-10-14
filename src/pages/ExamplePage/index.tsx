@@ -54,8 +54,16 @@ export const ExamplePage: FC = () => {
     return null;
   }
 
-  const { nameKey, descKey, imgPath, year, customer, customerKey, tags, urls } =
-    example;
+  const {
+    nameKey,
+    descKey,
+    imgPath,
+    year,
+    customer,
+    customerKey,
+    tags,
+    demoImageUrls,
+  } = example;
 
   return (
     <>
@@ -118,7 +126,7 @@ export const ExamplePage: FC = () => {
       {/* demo image carousel */}
       <Box p={4} bgcolor="#00000005">
         <Splide aria-label="My Favorite Images">
-          {urls.map(url => (
+          {demoImageUrls.map(url => (
             <SplideSlide key={url}>
               <Box display="flex" justifyContent="center">
                 <ButtonBase

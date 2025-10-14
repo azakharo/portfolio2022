@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { COLOR__DARK_GREY } from 'src/theme';
 import { useAnalytics } from 'src/hooks/useAnalytics';
 import { ExampleData } from 'src/types/example';
-import openPopUp from './PopUp';
+import { useHistory } from 'react-router-dom';
+import { ROUTE__EXAMPLE } from 'src/routes/routes';
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const Example: FC<Props> = ({ data }) => {
+  const history = useHistory();
   const [t] = useTranslation();
   const classes = useStyles();
   const { sendEvent: sendAnalyticEvent } = useAnalytics();
@@ -34,11 +36,8 @@ const Example: FC<Props> = ({ data }) => {
       label: id,
     });
 
-    // open popup with additional info
-    openPopUp({ data }).catch(() => {
-      // on cancel do nothing
-    });
-  }, [data, id, sendAnalyticEvent]);
+    history.push(ROUTE__EXAMPLE.replace(':id', id));
+  }, [id, sendAnalyticEvent, history]);
 
   return (
     <ButtonBase onClick={handleClick}>

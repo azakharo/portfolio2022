@@ -50,8 +50,16 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
   const [t] = useTranslation();
   const classes = useStyles();
   const isMobile = useIsMobile();
-  const { nameKey, descKey, imgPath, year, customer, customerKey, tags, urls } =
-    data;
+  const {
+    nameKey,
+    descKey,
+    imgPath,
+    year,
+    customer,
+    customerKey,
+    tags,
+    demoImageUrls,
+  } = data;
 
   const handleClose = useCallback(() => {
     onReject();
@@ -81,7 +89,7 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
 
             {/* demo links */}
             <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
-              {urls.map((url, urlInd) => (
+              {demoImageUrls.map((url, urlInd) => (
                 <Typography variant="subtitle1" key={url}>
                   <a
                     target="_blank"
