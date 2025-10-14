@@ -23,6 +23,7 @@ import imgLentaCat from 'src/assets/examples/lenta/cat.jpg';
 import imgLentaTasks from 'src/assets/examples/lenta/tasks.png';
 import imgLentaEmployees from 'src/assets/examples/lenta/employees.png';
 import imgLentaLogin from 'src/assets/examples/lenta/login.jpg';
+import imgLentaGoods from 'src/assets/examples/lenta/goods.png';
 import { ExampleData } from 'src/types/example';
 import imgNovakid1 from 'src/assets/examples/novakid/demo1.png';
 import imgNovakid2 from 'src/assets/examples/novakid/demo2.png';
@@ -37,7 +38,12 @@ export const examples: ExampleData[] = [
     id: 'lenta',
     nameKey: 'examples__lenta__name',
     imgPath: imgLentaCat,
-    demoImageUrls: [imgLentaEmployees, imgLentaTasks, imgLentaLogin],
+    demoImageUrls: [
+      imgLentaEmployees,
+      imgLentaTasks,
+      imgLentaGoods,
+      imgLentaLogin,
+    ],
     descKey: 'examples__lenta__description',
     tags: [
       'React.js',
@@ -47,6 +53,7 @@ export const examples: ExampleData[] = [
       'react-query',
       'vite',
       'vitest',
+      'react-testing-library',
       'FSD',
       'eslint',
       'prettier',
