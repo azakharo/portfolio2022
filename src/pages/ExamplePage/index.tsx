@@ -80,13 +80,7 @@ export const ExamplePage: FC = () => {
         <Typography variant="h4">{t(nameKey)}</Typography>
       </Box>
 
-      <Box
-        display={isMobile ? 'block' : 'flex'}
-        mb={4}
-        gridGap={20}
-        px={4}
-        py={4}
-      >
+      <Box display={isMobile ? 'block' : 'flex'} gridGap={20} px={4} pt={4}>
         <img
           style={{
             height: isMobile ? 'auto' : '30vh',

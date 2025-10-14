@@ -11,7 +11,7 @@ import ErrorBoundary from './ErrorBoundary';
 import { createAppTheme } from './theme';
 import useSettings from './hooks/useSettings';
 import './font.css';
-import '@splidejs/react-splide/dist/css/themes/splide-default.min.css';
+import '@splidejs/react-splide/dist/css/themes/splide-skyblue.min.css';
 
 const App: FC = () => {
   const { settings } = useSettings();
