@@ -24,6 +24,13 @@ import imgLentaTasks from 'src/assets/examples/lenta/tasks.png';
 import imgLentaEmployees from 'src/assets/examples/lenta/employees.png';
 import imgLentaLogin from 'src/assets/examples/lenta/login.jpg';
 import { ExampleData } from 'src/types/example';
+import imgNovakid1 from 'src/assets/examples/novakid/demo1.png';
+import imgNovakid2 from 'src/assets/examples/novakid/demo2.png';
+import imgNovakid3 from 'src/assets/examples/novakid/demo3.png';
+import imgNovakid4 from 'src/assets/examples/novakid/demo4.png';
+import imgNovakid5 from 'src/assets/examples/novakid/demo5.png';
+import imgNovakid6 from 'src/assets/examples/novakid/demo6.png';
+import imgNovakid7 from 'src/assets/examples/novakid/demo7.png';
 
 export const examples: ExampleData[] = [
   {
@@ -55,13 +62,13 @@ export const examples: ExampleData[] = [
     nameKey: 'examples__novakid__name',
     imgPath: novakidImg,
     demoImageUrls: [
-      'https://disk.yandex.ru/i/g0Fu95W_t0AVBQ',
-      'https://disk.yandex.ru/i/sFZqrYFxQpBp8w',
-      'https://disk.yandex.ru/i/q5uKbilJmSRxcQ',
-      'https://disk.yandex.ru/i/ALLvxAb3ivADwg',
-      'https://disk.yandex.ru/i/GILAmZIT-oASHw',
-      'https://disk.yandex.ru/i/TE_Cel2rAHaABQ',
-      'https://disk.yandex.ru/i/_fWBaa9GtfjoLw',
+      imgNovakid1,
+      imgNovakid2,
+      imgNovakid3,
+      imgNovakid4,
+      imgNovakid5,
+      imgNovakid6,
+      imgNovakid7,
     ],
     descKey: 'examples__novakid__description',
     tags: [
