@@ -130,8 +130,8 @@ export const ExamplePage: FC = () => {
                     src={url}
                     alt=""
                     style={{
-                      height: '45vh',
-                      width: 'auto',
+                      height: isMobile ? 'auto' : '45vh',
+                      width: isMobile ? '100%' : 'auto',
                     }}
                   />
                 </ButtonBase>
