@@ -59,6 +59,10 @@ const useStyles = makeStyles(
             transform: theme.direction === 'rtl' ? 'rotate(180deg)' : 'none',
           },
         },
+        img: {
+          display: 'block',
+          maxWidth: '100%',
+        },
       },
     }),
   {

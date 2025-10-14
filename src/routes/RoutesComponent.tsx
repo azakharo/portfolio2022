@@ -7,8 +7,14 @@ import {
   RouteProps,
 } from 'react-router-dom';
 
-import { ROUTE__ERROR__404, ROUTE__MAIN, ROUTE__TEST } from 'src/routes/routes';
+import {
+  ROUTE__ERROR__404,
+  ROUTE__EXAMPLE,
+  ROUTE__MAIN,
+  ROUTE__TEST,
+} from 'src/routes/routes';
 import lazyWithRetry from 'src/utils/lazyWithRetry';
+import { ExamplePage } from 'src/pages/ExamplePage';
 import Route from './EnhancedRoute';
 
 const Main = lazyWithRetry(() => import('src/pages/Main'));
@@ -24,6 +30,11 @@ const routesProps: RouteProps[] = [
   {
     path: ROUTE__MAIN,
     component: Main,
+    exact: true,
+  },
+  {
+    path: ROUTE__EXAMPLE,
+    component: ExamplePage,
     exact: true,
   },
   {

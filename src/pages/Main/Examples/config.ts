@@ -23,25 +23,21 @@ import imgLentaCat from 'src/assets/examples/lenta/cat.jpg';
 import imgLentaTasks from 'src/assets/examples/lenta/tasks.png';
 import imgLentaEmployees from 'src/assets/examples/lenta/employees.png';
 import imgLentaLogin from 'src/assets/examples/lenta/login.jpg';
-
-export interface ExampleData {
-  id: string;
-  nameKey: string;
-  imgPath: string;
-  urls: string[];
-  descKey: string;
-  tags: string[];
-  year: number;
-  customer?: string;
-  customerKey?: string;
-}
+import { ExampleData } from 'src/types/example';
+import imgNovakid1 from 'src/assets/examples/novakid/demo1.png';
+import imgNovakid2 from 'src/assets/examples/novakid/demo2.png';
+import imgNovakid3 from 'src/assets/examples/novakid/demo3.png';
+import imgNovakid4 from 'src/assets/examples/novakid/demo4.png';
+import imgNovakid5 from 'src/assets/examples/novakid/demo5.png';
+import imgNovakid6 from 'src/assets/examples/novakid/demo6.png';
+import imgNovakid7 from 'src/assets/examples/novakid/demo7.png';
 
 export const examples: ExampleData[] = [
   {
     id: 'lenta',
     nameKey: 'examples__lenta__name',
     imgPath: imgLentaCat,
-    urls: [imgLentaEmployees, imgLentaTasks, imgLentaLogin],
+    demoImageUrls: [imgLentaEmployees, imgLentaTasks, imgLentaLogin],
     descKey: 'examples__lenta__description',
     tags: [
       'React.js',
@@ -65,14 +61,14 @@ export const examples: ExampleData[] = [
     id: 'novakid',
     nameKey: 'examples__novakid__name',
     imgPath: novakidImg,
-    urls: [
-      'https://disk.yandex.ru/i/g0Fu95W_t0AVBQ',
-      'https://disk.yandex.ru/i/sFZqrYFxQpBp8w',
-      'https://disk.yandex.ru/i/q5uKbilJmSRxcQ',
-      'https://disk.yandex.ru/i/ALLvxAb3ivADwg',
-      'https://disk.yandex.ru/i/GILAmZIT-oASHw',
-      'https://disk.yandex.ru/i/TE_Cel2rAHaABQ',
-      'https://disk.yandex.ru/i/_fWBaa9GtfjoLw',
+    demoImageUrls: [
+      imgNovakid1,
+      imgNovakid2,
+      imgNovakid3,
+      imgNovakid4,
+      imgNovakid5,
+      imgNovakid6,
+      imgNovakid7,
     ],
     descKey: 'examples__novakid__description',
     tags: [
@@ -97,7 +93,7 @@ export const examples: ExampleData[] = [
     id: 'mentor',
     nameKey: 'examples__mentor__name',
     imgPath: mentorImg,
-    urls: ['https://mentor-pi.vercel.app/'],
+    demoUrls: ['https://mentor-pi.vercel.app/'],
     descKey: 'examples__mentor__description',
     tags: ['React.js', 'Redux', 'RxJS', 'es6', 'Webpack', 'create-react-app'],
     year: 2017,
@@ -107,7 +103,7 @@ export const examples: ExampleData[] = [
     id: 'croc',
     nameKey: 'examples__croc__name',
     imgPath: crocImg,
-    urls: [
+    demoUrls: [
       'https://www.loom.com/share/68b021f3378b4d56a37df0957fe32291',
       'https://www.loom.com/share/a5b9f049a87145d3a4c1349454a4a2a8',
     ],
@@ -137,12 +133,8 @@ export const examples: ExampleData[] = [
     id: 'bk',
     nameKey: 'examples__bk__name',
     imgPath: imgBkMain,
-    urls: [
-      'https://bk.ren.tv/',
-      'https://ren.tv/project/boitsovskii-klub',
-      imgBkGallery,
-      imgBkMain,
-    ],
+    demoUrls: ['https://bk.ren.tv/', 'https://ren.tv/project/boitsovskii-klub'],
+    demoImageUrls: [imgBkGallery, imgBkMain],
     descKey: 'examples__bk__description',
     tags: [
       'Next.js',
@@ -159,7 +151,7 @@ export const examples: ExampleData[] = [
     id: 'iz',
     nameKey: 'examples__iz__name',
     imgPath: imgIz,
-    urls: [imgFos, imgSuzAdminka, imgRen, imgIz],
+    demoImageUrls: [imgFos, imgSuzAdminka, imgRen, imgIz],
     descKey: 'examples__iz__description',
     tags: [
       'React.js',
@@ -183,7 +175,7 @@ export const examples: ExampleData[] = [
     id: 'cloudike',
     nameKey: 'examples__cloudike__name',
     imgPath: cloudikeImg,
-    urls: [
+    demoUrls: [
       'https://www.loom.com/share/57abda2591c1470db5e8e9209f820cd8',
       'https://www.loom.com/share/2cfce33d39aa40b8b3834c6e4a37475d',
       'https://www.loom.com/share/a81ed8deeb3a4d1887fa0fb4285d5d7e',
@@ -213,7 +205,7 @@ export const examples: ExampleData[] = [
     id: 'virtman',
     nameKey: 'examples__virtman__name',
     imgPath: imgVirtman,
-    urls: ['https://gnivc.ru/software/', 'https://gnivc.ru/on_gnivts/'],
+    demoUrls: ['https://gnivc.ru/software/', 'https://gnivc.ru/on_gnivts/'],
     descKey: 'examples__virtman__description',
     tags: [
       'React.js',
@@ -237,7 +229,7 @@ export const examples: ExampleData[] = [
     id: 'uptime-monitor',
     nameKey: 'examples__uptime__name',
     imgPath: uptimeImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__uptime__description',
     tags: [
       'angular.js',
@@ -255,7 +247,7 @@ export const examples: ExampleData[] = [
     id: 'mordovia',
     nameKey: 'examples__mordovia__name',
     imgPath: mordoviaImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__mordovia__description',
     tags: [
       'angular.js',
@@ -273,7 +265,7 @@ export const examples: ExampleData[] = [
     id: 'dora',
     nameKey: 'examples__dora__name',
     imgPath: doraImg,
-    urls: ['https://do-ra.ru'],
+    demoUrls: ['https://do-ra.ru'],
     descKey: 'examples__dora__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2011,
@@ -283,7 +275,7 @@ export const examples: ExampleData[] = [
     id: 'acceptant',
     nameKey: 'examples__acceptant__name',
     imgPath: acceptantImg,
-    urls: [''],
+    demoImageUrls: [],
     descKey: 'examples__acceptant__description',
     tags: [
       'angular.js',
@@ -301,7 +293,7 @@ export const examples: ExampleData[] = [
     id: 'alarm-panel',
     nameKey: 'examples__alarm__name',
     imgPath: alarmImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__alarm__description',
     tags: [
       'angular.js',
@@ -324,7 +316,7 @@ export const examples: ExampleData[] = [
     id: 'acoustic-detector',
     nameKey: 'examples__detector__name',
     imgPath: detectorImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__detector__description',
     tags: [
       'angular.js',
@@ -344,7 +336,7 @@ export const examples: ExampleData[] = [
     id: 'co2',
     nameKey: 'examples__co2__name',
     imgPath: co2Img,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__co2__description',
     tags: [
       'angular.js',
@@ -363,7 +355,7 @@ export const examples: ExampleData[] = [
     id: 'safe-city',
     nameKey: 'examples__safeCity__name',
     imgPath: safeCityImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__safeCity__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2012,
@@ -373,7 +365,7 @@ export const examples: ExampleData[] = [
     id: 'votum',
     nameKey: 'examples__votum__name',
     imgPath: votumImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__votum__description',
     tags: ['Django', 'Python', 'Django REST Framework'],
     year: 2011,
@@ -383,7 +375,7 @@ export const examples: ExampleData[] = [
     id: 'asr',
     nameKey: 'examples__asr__name',
     imgPath: asrImg,
-    urls: [],
+    demoImageUrls: [],
     descKey: 'examples__asr__description',
     tags: ['Django', 'Python'],
     year: 2011,
