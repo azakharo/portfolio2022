@@ -89,7 +89,7 @@ const PopUp: FC<Props> = ({ data, onReject }) => {
 
             {/* demo links */}
             <Box display="flex" gridGap={10} mt={2} flexWrap="wrap">
-              {demoImageUrls.map((url, urlInd) => (
+              {demoImageUrls?.map((url, urlInd) => (
                 <Typography variant="subtitle1" key={url}>
                   <a
                     target="_blank"

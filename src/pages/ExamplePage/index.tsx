@@ -144,7 +144,7 @@ export const ExamplePage: FC = () => {
       </Box>
 
       {/* demo image carousel */}
-      {!isEmpty(demoImageUrls) && (
+      {demoImageUrls && !isEmpty(demoImageUrls) && (
         <Box p={4} bgcolor="#00000005">
           <Splide aria-label="My Favorite Images">
             {demoImageUrls.map(url => (

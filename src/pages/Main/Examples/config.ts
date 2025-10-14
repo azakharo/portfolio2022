@@ -94,7 +94,6 @@ export const examples: ExampleData[] = [
     nameKey: 'examples__mentor__name',
     imgPath: mentorImg,
     demoUrls: ['https://mentor-pi.vercel.app/'],
-    demoImageUrls: [],
     descKey: 'examples__mentor__description',
     tags: ['React.js', 'Redux', 'RxJS', 'es6', 'Webpack', 'create-react-app'],
     year: 2017,
@@ -104,7 +103,7 @@ export const examples: ExampleData[] = [
     id: 'croc',
     nameKey: 'examples__croc__name',
     imgPath: crocImg,
-    demoImageUrls: [
+    demoUrls: [
       'https://www.loom.com/share/68b021f3378b4d56a37df0957fe32291',
       'https://www.loom.com/share/a5b9f049a87145d3a4c1349454a4a2a8',
     ],
@@ -134,12 +133,8 @@ export const examples: ExampleData[] = [
     id: 'bk',
     nameKey: 'examples__bk__name',
     imgPath: imgBkMain,
-    demoImageUrls: [
-      'https://bk.ren.tv/',
-      'https://ren.tv/project/boitsovskii-klub',
-      imgBkGallery,
-      imgBkMain,
-    ],
+    demoUrls: ['https://bk.ren.tv/', 'https://ren.tv/project/boitsovskii-klub'],
+    demoImageUrls: [imgBkGallery, imgBkMain],
     descKey: 'examples__bk__description',
     tags: [
       'Next.js',
@@ -180,7 +175,7 @@ export const examples: ExampleData[] = [
     id: 'cloudike',
     nameKey: 'examples__cloudike__name',
     imgPath: cloudikeImg,
-    demoImageUrls: [
+    demoUrls: [
       'https://www.loom.com/share/57abda2591c1470db5e8e9209f820cd8',
       'https://www.loom.com/share/2cfce33d39aa40b8b3834c6e4a37475d',
       'https://www.loom.com/share/a81ed8deeb3a4d1887fa0fb4285d5d7e',
@@ -210,10 +205,7 @@ export const examples: ExampleData[] = [
     id: 'virtman',
     nameKey: 'examples__virtman__name',
     imgPath: imgVirtman,
-    demoImageUrls: [
-      'https://gnivc.ru/software/',
-      'https://gnivc.ru/on_gnivts/',
-    ],
+    demoUrls: ['https://gnivc.ru/software/', 'https://gnivc.ru/on_gnivts/'],
     descKey: 'examples__virtman__description',
     tags: [
       'React.js',
@@ -273,7 +265,7 @@ export const examples: ExampleData[] = [
     id: 'dora',
     nameKey: 'examples__dora__name',
     imgPath: doraImg,
-    demoImageUrls: ['https://do-ra.ru'],
+    demoUrls: ['https://do-ra.ru'],
     descKey: 'examples__dora__description',
     tags: ['windows-phone', 'C#', 'Silverlight'],
     year: 2011,
@@ -283,7 +275,7 @@ export const examples: ExampleData[] = [
     id: 'acceptant',
     nameKey: 'examples__acceptant__name',
     imgPath: acceptantImg,
-    demoImageUrls: [''],
+    demoImageUrls: [],
     descKey: 'examples__acceptant__description',
     tags: [
       'angular.js',

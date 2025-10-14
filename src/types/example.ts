@@ -3,8 +3,7 @@ export interface ExampleData {
   nameKey: string;
   imgPath: string;
   demoUrls?: string[];
-  demoImageUrls: string[];
-  demoVideoUrls?: string[];
+  demoImageUrls?: string[];
   descKey: string;
   tags: string[];
   year: number;
