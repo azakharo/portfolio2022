@@ -16,6 +16,7 @@ import capitalize from 'lodash/capitalize';
 import { useIsMobile } from 'src/hooks/responsive';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { openInNewTab } from 'src/utils/browser';
+import isEmpty from 'lodash/isEmpty';
 
 const useStyles = makeStyles(theme => ({
   img: {
@@ -62,6 +63,7 @@ export const ExamplePage: FC = () => {
     customer,
     customerKey,
     tags,
+    demoUrls,
     demoImageUrls,
   } = example;
 
@@ -114,6 +116,24 @@ export const ExamplePage: FC = () => {
             {customerKey ? t(customerKey) : customer || ''}
           </Typography>
 
+          {/* demo links */}
+          {demoUrls && !isEmpty(demoUrls) && (
+            <Box display="flex" gridGap={10} mb={2} flexWrap="wrap">
+              {demoUrls.map((url, urlInd) => (
+                <Typography variant="subtitle1" key={url}>
+                  <a
+                    target="_blank"
+                    href={url}
+                    rel="noreferrer"
+                    className={classes.nowrap}
+                  >
+                    {t('examplePopUp__demoLabel')} {urlInd + 1}
+                  </a>
+                </Typography>
+              ))}
+            </Box>
+          )}
+
           {/* tags */}
           <Box mb={2} className={classes.tagsContainer}>
             {tags.map(tag => (
@@ -124,30 +144,32 @@ export const ExamplePage: FC = () => {
       </Box>
 
       {/* demo image carousel */}
-      <Box p={4} bgcolor="#00000005">
-        <Splide aria-label="My Favorite Images">
-          {demoImageUrls.map(url => (
-            <SplideSlide key={url}>
-              <Box display="flex" justifyContent="center">
-                <ButtonBase
-                  onClick={() => {
-                    openInNewTab(url, true);
-                  }}
-                >
-                  <img
-                    src={url}
-                    alt=""
-                    style={{
-                      height: isMobile ? 'auto' : '45vh',
-                      width: isMobile ? '100%' : 'auto',
+      {!isEmpty(demoImageUrls) && (
+        <Box p={4} bgcolor="#00000005">
+          <Splide aria-label="My Favorite Images">
+            {demoImageUrls.map(url => (
+              <SplideSlide key={url}>
+                <Box display="flex" justifyContent="center">
+                  <ButtonBase
+                    onClick={() => {
+                      openInNewTab(url, true);
                     }}
-                  />
-                </ButtonBase>
-              </Box>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </Box>
+                  >
+                    <img
+                      src={url}
+                      alt=""
+                      style={{
+                        height: isMobile ? 'auto' : '45vh',
+                        width: isMobile ? '100%' : 'auto',
+                      }}
+                    />
+                  </ButtonBase>
+                </Box>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </Box>
+      )}
     </>
   );
 };

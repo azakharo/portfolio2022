@@ -2,7 +2,7 @@ export interface ExampleData {
   id: string;
   nameKey: string;
   imgPath: string;
-  demoUrl?: string;
+  demoUrls?: string[];
   demoImageUrls: string[];
   demoVideoUrls?: string[];
   descKey: string;
