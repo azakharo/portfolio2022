@@ -11,7 +11,6 @@ import detectorImg from 'src/assets/examples/detector_ui.png';
 import co2Img from 'src/assets/examples/co2.png';
 import safeCityImg from 'src/assets/examples/safeCity.jpg';
 import votumImg from 'src/assets/examples/votum.png';
-import asrImg from 'src/assets/examples/asr.png';
 import imgIz from 'src/assets/examples/iz/iz.jpg';
 import imgRen from 'src/assets/examples/iz/ren.jpg';
 import imgFos from 'src/assets/examples/iz/fos.jpg';
@@ -23,6 +22,7 @@ import imgLentaCat from 'src/assets/examples/lenta/cat.jpg';
 import imgLentaTasks from 'src/assets/examples/lenta/tasks.png';
 import imgLentaEmployees from 'src/assets/examples/lenta/employees.png';
 import imgLentaLogin from 'src/assets/examples/lenta/login.jpg';
+import imgLentaGoods from 'src/assets/examples/lenta/goods.png';
 import { ExampleData } from 'src/types/example';
 import imgNovakid1 from 'src/assets/examples/novakid/demo1.png';
 import imgNovakid2 from 'src/assets/examples/novakid/demo2.png';
@@ -31,13 +31,49 @@ import imgNovakid4 from 'src/assets/examples/novakid/demo4.png';
 import imgNovakid5 from 'src/assets/examples/novakid/demo5.png';
 import imgNovakid6 from 'src/assets/examples/novakid/demo6.png';
 import imgNovakid7 from 'src/assets/examples/novakid/demo7.png';
+import imgYonLogo from 'src/assets/examples/yon/logo.jpg';
+import imgYon1 from 'src/assets/examples/yon/photo1.jpg';
+import imgYon2 from 'src/assets/examples/yon/photo2.jpg';
+import imgYon3 from 'src/assets/examples/yon/photo3.jpg';
+import imgYon4 from 'src/assets/examples/yon/photo4.jpg';
 
 export const examples: ExampleData[] = [
+  {
+    id: 'yon',
+    nameKey: 'examples__yon__name',
+    imgPath: imgYonLogo,
+    demoImageUrls: [imgYon1, imgYon2, imgYon3, imgYon4],
+    descKey: 'examples__yon__description',
+    tags: [
+      'React.js',
+      'Typescript',
+      'MUI',
+      'react-query',
+      'i18next',
+      'storybook',
+      'vite',
+      'vitest',
+      'react-testing-library',
+      'FSD',
+      'eslint',
+      'prettier',
+      'axios',
+      'date-fns',
+      'react-hook-form + yup',
+    ],
+    year: 2025,
+    customerKey: 'examples__yon__customer',
+  },
   {
     id: 'lenta',
     nameKey: 'examples__lenta__name',
     imgPath: imgLentaCat,
-    demoImageUrls: [imgLentaEmployees, imgLentaTasks, imgLentaLogin],
+    demoImageUrls: [
+      imgLentaEmployees,
+      imgLentaTasks,
+      imgLentaGoods,
+      imgLentaLogin,
+    ],
     descKey: 'examples__lenta__description',
     tags: [
       'React.js',
@@ -47,6 +83,7 @@ export const examples: ExampleData[] = [
       'react-query',
       'vite',
       'vitest',
+      'react-testing-library',
       'FSD',
       'eslint',
       'prettier',
@@ -371,14 +408,14 @@ export const examples: ExampleData[] = [
     year: 2011,
     customer: 'ЦИК РФ',
   },
-  {
-    id: 'asr',
-    nameKey: 'examples__asr__name',
-    imgPath: asrImg,
-    demoImageUrls: [],
-    descKey: 'examples__asr__description',
-    tags: ['Django', 'Python'],
-    year: 2011,
-    customer: 'ИТЦ Система-Саров',
-  },
+  // {
+  //   id: 'asr',
+  //   nameKey: 'examples__asr__name',
+  //   imgPath: asrImg,
+  //   demoImageUrls: [],
+  //   descKey: 'examples__asr__description',
+  //   tags: ['Django', 'Python'],
+  //   year: 2011,
+  //   customer: 'ИТЦ Система-Саров',
+  // },
 ];
