@@ -23,7 +23,7 @@ import {
   SECTION__ABOUT,
   SECTION__CONTACTS,
   SECTION__EXAMPLES,
-  SECTION__SKILLS,
+  SECTION__MY_STACK,
   SECTION__PICTURE,
 } from 'src/pages/Main/sectionIds';
 import { COLOR__LIGHT_GREY } from 'src/theme';
@@ -49,7 +49,7 @@ const uiSections: UiSection[] = [
   },
   {
     labelKey: 'header__menuItem__Skills',
-    sectionId: SECTION__SKILLS,
+    sectionId: SECTION__MY_STACK,
   },
   // {
   //   labelKey: 'header__menuItem__FuturePlans',
