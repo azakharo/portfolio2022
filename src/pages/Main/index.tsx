@@ -7,10 +7,9 @@ import {
   SECTION__ABOUT,
   SECTION__EXAMPLES,
   SECTION__PICTURE,
-  SECTION__SKILLS,
+  SECTION__MY_STACK,
 } from 'src/pages/Main/sectionIds';
 import { FadeIn } from 'src/components/animations';
-import MyFrontendHistory from 'src/pages/Main/MyFrontendHistory';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -19,14 +18,7 @@ import Contacts from './Contacts';
 import HowIcanHelp from './HowIcanHelp';
 
 const Main: FC = () => {
-  const sectionRefs = [
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-  ];
+  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const activeSectionIndex = useScrollSpy({
     sectionElementRefs: sectionRefs,
     offsetPx: -80, // height of the header + some gap
@@ -53,8 +45,8 @@ const Main: FC = () => {
         <Examples />
       </section>
 
-      <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
-        <MyFrontendHistory />
+      <section ref={sectionRefs[3]} id={SECTION__MY_STACK}>
+        ha-ha-ha
       </section>
 
       <FadeIn transition="1000ms ease-in-out">
