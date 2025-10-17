@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
 import { Box, Container, Typography } from '@material-ui/core';
-import { FaReact } from 'react-icons/fa';
+import { FaReact, FaTools } from 'react-icons/fa';
 import { GiCaveman } from 'react-icons/gi';
 import { FcProcess } from 'react-icons/fc';
 import { BiBuildingHouse } from 'react-icons/bi';
@@ -15,6 +15,10 @@ const items = [
   {
     labelKey: 'howIcanHelp__headDevelopment',
     icon: <GiCaveman color="orange" />,
+  },
+  {
+    labelKey: 'howIcanHelp__selectTools',
+    icon: <FaTools color="brown" />,
   },
   {
     labelKey: 'howIcanHelp__createInfra',
