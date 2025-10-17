@@ -10,6 +10,7 @@ import {
   SECTION__MY_STACK,
 } from 'src/pages/Main/sectionIds';
 import { FadeIn } from 'src/components/animations';
+import MyStack from './MyStack';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
@@ -46,7 +47,7 @@ const Main: FC = () => {
       </section>
 
       <section ref={sectionRefs[3]} id={SECTION__MY_STACK}>
-        ha-ha-ha
+        <MyStack />
       </section>
 
       <FadeIn transition="1000ms ease-in-out">

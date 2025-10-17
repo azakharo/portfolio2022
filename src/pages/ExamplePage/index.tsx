@@ -18,7 +18,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { openInNewTab } from 'src/utils/browser';
 import isEmpty from 'lodash/isEmpty';
 
-const useStyles = makeStyles(theme => ({
+export const useStyles = makeStyles(theme => ({
   img: {
     borderRadius: 10,
   },
