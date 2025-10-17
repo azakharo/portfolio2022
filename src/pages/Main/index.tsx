@@ -1,6 +1,5 @@
 import React, { FC, memo, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { Box } from '@material-ui/core';
 import useScrollSpy from 'react-use-scrollspy';
 
 import ScrollTopButton from 'src/components/Buttons/ScrollTop';
@@ -9,15 +8,12 @@ import {
   SECTION__EXAMPLES,
   SECTION__PICTURE,
   SECTION__SKILLS,
-  SECTION__SPECIALIZATION,
 } from 'src/pages/Main/sectionIds';
 import { FadeIn } from 'src/components/animations';
 import MyFrontendHistory from 'src/pages/Main/MyFrontendHistory';
-import Skills from 'src/pages/Main/Skills';
 import Header from './Header';
 import Picture from './Picture';
 import About from './About';
-import Specialization from './Specialization';
 import Examples from './Examples';
 import Contacts from './Contacts';
 import HowIcanHelp from './HowIcanHelp';
@@ -57,15 +53,8 @@ const Main: FC = () => {
         <Examples />
       </section>
 
-      <section ref={sectionRefs[3]} id={SECTION__SPECIALIZATION}>
-        <Box mt={4} mb={10}>
-          <Specialization />
-        </Box>
-      </section>
-
       <section ref={sectionRefs[4]} id={SECTION__SKILLS}>
         <MyFrontendHistory />
-        <Skills />
       </section>
 
       <FadeIn transition="1000ms ease-in-out">

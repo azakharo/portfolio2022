@@ -24,7 +24,6 @@ import {
   SECTION__CONTACTS,
   SECTION__EXAMPLES,
   SECTION__SKILLS,
-  SECTION__SPECIALIZATION,
   SECTION__PICTURE,
 } from 'src/pages/Main/sectionIds';
 import { COLOR__LIGHT_GREY } from 'src/theme';
@@ -47,10 +46,6 @@ const uiSections: UiSection[] = [
   {
     labelKey: 'header__menuItem__Examples',
     sectionId: SECTION__EXAMPLES,
-  },
-  {
-    labelKey: 'header__menuItem__Specialization',
-    sectionId: SECTION__SPECIALIZATION,
   },
   {
     labelKey: 'header__menuItem__Skills',
