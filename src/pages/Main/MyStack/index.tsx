@@ -98,7 +98,7 @@ const MyStack: FC = () => {
       >
         <Box flex={1} textAlign="left" py={2} px={2}>
           <Typography variant="h3" color="textPrimary">
-            {t('myStack__title', 'My current stack')}
+            {t('myStack__title')}
           </Typography>
         </Box>
 
@@ -107,8 +107,8 @@ const MyStack: FC = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Area</TableCell>
-                  <TableCell>Tools</TableCell>
+                  <TableCell>{t('myStack__area')}</TableCell>
+                  <TableCell>{t('myStack__tools')}</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
