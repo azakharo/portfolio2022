@@ -8,7 +8,7 @@ import doraImg from 'src/assets/examples/dora.jpg';
 import acceptantImg from 'src/assets/examples/acceptant1.jpg';
 import alarmImg from 'src/assets/examples/alarm-panel.png';
 import detectorImg from 'src/assets/examples/detector_ui.png';
-import co2Img from 'src/assets/examples/co2.png';
+// import co2Img from 'src/assets/examples/co2.png';
 import safeCityImg from 'src/assets/examples/safeCity.jpg';
 import votumImg from 'src/assets/examples/votum.png';
 import imgIz from 'src/assets/examples/iz/iz.jpg';
@@ -369,25 +369,25 @@ export const examples: ExampleData[] = [
     customer:
       'Муниципалитеты городов Воронеж, Кострома, Архангельск, Калуга, Московский ЦОДД',
   },
-  {
-    id: 'co2',
-    nameKey: 'examples__co2__name',
-    imgPath: co2Img,
-    demoImageUrls: [],
-    descKey: 'examples__co2__description',
-    tags: [
-      'angular.js',
-      'javascript',
-      'es6',
-      'flexbox',
-      'grunt',
-      'node.js',
-      'express.js',
-      'socket.io',
-    ],
-    year: 2016,
-    customer: 'ИТЦ Система-Саров',
-  },
+  // {
+  //   id: 'co2',
+  //   nameKey: 'examples__co2__name',
+  //   imgPath: co2Img,
+  //   demoImageUrls: [],
+  //   descKey: 'examples__co2__description',
+  //   tags: [
+  //     'angular.js',
+  //     'javascript',
+  //     'es6',
+  //     'flexbox',
+  //     'grunt',
+  //     'node.js',
+  //     'express.js',
+  //     'socket.io',
+  //   ],
+  //   year: 2016,
+  //   customer: 'ИТЦ Система-Саров',
+  // },
   {
     id: 'safe-city',
     nameKey: 'examples__safeCity__name',
