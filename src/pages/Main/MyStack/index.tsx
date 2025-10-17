@@ -16,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 
 import useIsSingleColumnMode from 'src/hooks/useIsSingleColumnMode';
 import { useStyles } from 'src/pages/ExamplePage/index';
+import { SplitTextPreconfigured } from 'src/components/SplitTextPreconfigured';
 
 interface StackRow {
   area: string;
@@ -81,6 +82,11 @@ const myStack: StackRow[] = [
   },
 ];
 
+const tableHeaderStyle = {
+  fontWeight: 700,
+  backgroundColor: '#F6F6F6',
+};
+
 const MyStack: FC = () => {
   const [t] = useTranslation();
   const isSingleColumn = useIsSingleColumnMode();
@@ -98,7 +104,7 @@ const MyStack: FC = () => {
       >
         <Box flex={1} textAlign="left" py={2} px={2}>
           <Typography variant="h3" color="textPrimary">
-            {t('myStack__title')}
+            <SplitTextPreconfigured text={t('myStack__title')} />
           </Typography>
         </Box>
 
@@ -107,13 +113,17 @@ const MyStack: FC = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>{t('myStack__area')}</TableCell>
-                  <TableCell>{t('myStack__tools')}</TableCell>
+                  <TableCell style={tableHeaderStyle}>
+                    {t('myStack__area')}
+                  </TableCell>
+                  <TableCell style={tableHeaderStyle}>
+                    {t('myStack__tools')}
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {myStack.map(({ area, tools }) => (
-                  <TableRow>
+                  <TableRow key={area}>
                     <TableCell>{area}</TableCell>
 
                     <TableCell>
