@@ -26,10 +26,10 @@ const About: FC = () => {
 
         {/* Right part */}
         <Box flex={2}>
-          <Typography variant="body1" color="textPrimary">
-            {t('about__whereIlive')}
-          </Typography>
-          <br />
+          {/* <Typography variant="body1" color="textPrimary"> */}
+          {/*  {t('about__whereIlive')} */}
+          {/* </Typography> */}
+          {/* <br /> */}
           <Typography variant="body1" color="textPrimary">
             <Trans i18nKey="about__myInterests" />
           </Typography>
